@@ -1,0 +1,257 @@
+cabal-version:       2.2
+                     -- for indefinite-modules and "common stanzas".
+
+----------------------------------------
+
+name:                genovation-control-pad
+version:             0.0
+
+-- x-revision:          0
+
+----------------------------------------
+
+synopsis:            INI Configs for the Genovation ControlPad CP24 and CP48
+description:         [1] Parse the config files of ControlPad devices (CP24 and CP48, and probably other sizes), made by the Genovation company. i.e. Those with a file-extension of ".ckd" a.k.a "Custom Keypad Definition" files, which are in the INI config format. [2] Create these INI files in a simple DSL, encoding human-readable events (e.g. @(press [Control] kC)@) into their bytestrings (e.g. ). [3] Verify the config files, in particular that [3a] all keybinding-encodings are valid, and that [3b] these keybinding-encodings are beneath their max length.
+
+build-type:          Simple
+
+license:             GPL-3.0-or-later
+license-file:        LICENSE.txt
+copyright:           2018 Spiros Boosalis
+
+author:              Spiros Boosalis
+maintainer:          samboosalis@gmail.com
+
+category:            Accessibility
+stability:           provisional
+
+-- extra-source-files:
+
+----------------------------------------
+-- REPOSITORY
+----------------------------------------
+
+homepage:            http://github.com/sboosali/genovation-control-pad#readme
+bug-reports:         http://github.com/sboosali/genovation-control-pad/issues
+
+source-repository head
+  type:     git
+  location: git://github.com/sboosali/genovation-control-pad.git
+
+-- source-repository this
+--   type:     git
+--   location: https://github.com/sboosali/genovation-control-pad/tree/v0.1
+
+----------------------------------------
+-- FLAGS
+----------------------------------------
+
+-- flag ...
+--   default:     False
+--   description: Enable ...
+--   manual:      True
+
+----------------------------------------
+-- COMMON_STANZAS
+----------------------------------------
+common haskell2020
+
+ default-language:
+   Haskell2010
+
+ ------------------------------
+ ------------------------------
+ ghc-options:
+
+  --------------------
+  -- warning groups
+  --------------------
+
+  -Wall
+
+  --------------------
+  -- disabled warnings
+  --------------------
+
+  -Wno-unticked-promoted-constructors
+
+  --------------------
+  -- enabled warnings
+  --------------------
+
+  -- enable
+  -Wincomplete-uni-patterns
+  -Wincomplete-record-updates
+  -Widentities
+  -Wmissing-methods
+  -fwarn-tabs
+ 
+  --------------------
+  -- typed-holes
+  --------------------
+
+  -- use `typed-holes`, not `undefined`, during development
+
+  -fdefer-typed-holes
+  -Wtyped-holes
+
+  --------------------
+  -- (miscellaneous warnings)
+  --------------------
+
+  -- raise a warning into an error
+  -- -Werror=missing-fields
+
+ if impl(ghc >= 8.0)
+    ghc-options:
+
+        --------------------
+        -- warning groups
+        --------------------     
+
+        -Wcompat
+      
+        --------------------
+        -- enabled warnings
+        --------------------
+
+        -Wnoncanonical-monad-instances
+        -Wnoncanonical-monadfail-instances
+
+ ------------------------------
+ ------------------------------
+
+ default-extensions:
+
+   --------------------
+   -- "controversial"
+   --------------------
+   NoImplicitPrelude
+
+   --------------------
+   -- `deriving`
+   --------------------
+   AutoDeriveTypeable
+   DeriveDataTypeable
+   DeriveGeneric
+   DeriveFunctor
+   DeriveFoldable
+   DeriveTraversable
+   DeriveLift
+   StandaloneDeriving
+
+   --------------------
+   -- syntax
+   --------------------
+   PackageImports
+   LambdaCase
+   EmptyCase
+   TypeOperators
+   PostfixOperators
+   BangPatterns
+   KindSignatures
+   NamedFieldPuns
+   RecordWildCards
+   TupleSections
+   MultiWayIf
+   DoAndIfThenElse
+   EmptyDataDecls
+   InstanceSigs
+   
+   --------------------
+   -- typeclasses
+   --------------------
+   MultiParamTypeClasses
+   FlexibleContexts
+   FlexibleInstances
+   TypeFamilies
+   FunctionalDependencies
+
+   --------------------
+   -- patterns
+   --------------------
+   ViewPatterns
+   PatternSynonyms
+
+   --------------------
+   -- (miscellaneous)
+   --------------------
+   ScopedTypeVariables
+
+ other-extensions:
+
+   --------------------
+   -- macros
+   --------------------
+   TemplateHaskell
+   -- QuasiQuotes
+
+   --------------------
+   -- syntax (of literals)
+   --------------------
+   OverloadedStrings
+   OverloadedLists
+
+   --------------------
+   -- (miscellaneous)
+   --------------------
+
+   -- RebindableSyntax
+   -- kinds:
+   -- DataKinds ConstraintKinds
+   -- harmful to inference:
+   -- GADTs RankNTypes
+   -- (miscellaneous)
+
+----------------------------------------
+-- LIBRARY
+----------------------------------------
+library
+
+ import: haskell2020
+
+ hs-source-dirs:
+  sources
+
+ ------------------------------
+ ------------------------------
+ exposed-modules:
+
+  GenovationControlPad
+
+ ------------------------------
+ ------------------------------
+ build-depends:
+
+  --------------------
+  -- boot-libraries,
+  -- standard-library packages,
+  -- "extended" standard-library packages.
+  --------------------
+
+    base >=4.7 && <5
+  , text 
+  , bytestring
+  , transformers
+  , mtl
+  , containers
+  , deepseq
+  , hashable
+  , unordered-containers
+
+   --------------------
+   -- my libraries.
+   --------------------
+
+  , spiros
+
+   --------------------
+   -- other libraries.
+   --------------------
+
+  , ini
+
+
+----------------------------------------
+-- 
+----------------------------------------
