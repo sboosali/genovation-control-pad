@@ -1,0 +1,43 @@
+# my
+ignore/ 
+temporary/
+
+# ghcid
+ghcid.txt
+ghcid-*.txt
+
+# Haskell
+.ghc.environment.*
+cabal.project.local
+*.o
+*.hi
+*.chi
+*.chs.h
+report.html
+.cabal-sandbox/
+cabal.sandbox.config
+cabal.config
+dist-newstyle/
+dist/
+.stack-work/
+.styx/
+
+# nix
+result-*/
+result/
+
+# Emacs
+*~
+\#*
+.\#*
+\#*\#
+,*
+.*.swp
+.*.swo
+TAGS
+.projectile
+
+# OS X
+.DS_Store
+
+# miscellaneous

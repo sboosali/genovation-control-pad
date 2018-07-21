@@ -1,0 +1,47 @@
+########################################
+[GLOBAL_PARAMETERS]
+Model_Number=CP48
+Number_Of_Keys=48
+Key_Roll_Over=2
+LED_Function=1
+LED2_Function=2
+LED3_Function=4
+Character_Pacing=1
+
+########################################
+[KEY0]
+KeyType=0
+L1_AutoRepeat=0
+L2_AutoRepeat=0
+L1_MacroMode=0
+L2_MacroMode=0
+Level_1_Codes=1422f01432
+Level_2_Codes=
+Level_1_Name=Emacs: list-buffers
+Level_2_Name=
+
+# i.e...
+# 
+# 1422f01432
+# =
+# x14 x22 xf0 x14 32
+# =
+# (x14) (x22) (xf0 x14) (32)
+# =
+# [Ctrl_Down, X_Key, Ctrl_Up, B_Key]
+# =
+# "C-x b"
+
+########################################
+[KEY1]
+KeyType=0
+L1_AutoRepeat=0
+L2_AutoRepeat=0
+L1_MacroMode=0
+L2_MacroMode=0
+Level_1_Codes=
+Level_2_Codes=
+Level_1_Name=
+Level_2_Name=
+
+########################################
