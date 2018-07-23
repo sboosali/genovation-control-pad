@@ -3,8 +3,8 @@ ignore/
 temporary/
 
 # ghcid
-ghcid.txt
-ghcid-*.txt
+*.ghcid
+.ghcid.d/
 
 # Haskell
 .ghc.environment.*
@@ -41,3 +41,4 @@ TAGS
 .DS_Store
 
 # miscellaneous
+*.save

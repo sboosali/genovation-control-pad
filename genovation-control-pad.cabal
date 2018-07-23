@@ -10,7 +10,8 @@ version:             0.0
 
 ----------------------------------------
 
-synopsis:            INI Configs for the Genovation ControlPad CP24 and CP48
+synopsis:            Parse/Create/Validate INI Configs for the Genovation ControlPad CP48
+
 description:         [1] Parse the config files of ControlPad devices (CP24 and CP48, and probably other sizes), made by the Genovation company. i.e. Those with a file-extension of ".ckd" a.k.a "Custom Keypad Definition" files, which are in the INI config format. [2] Create these INI files in a simple DSL, encoding human-readable events (e.g. @(press [Control] kC)@) into their bytestrings (e.g. ). [3] Verify the config files, in particular that [3a] all keybinding-encodings are valid, and that [3b] these keybinding-encodings are beneath their max length.
 
 build-type:          Simple
@@ -25,7 +26,17 @@ maintainer:          samboosalis@gmail.com
 category:            Accessibility
 stability:           provisional
 
--- extra-source-files:
+----------------------------------------
+-- (EXTRA) FILES
+----------------------------------------
+
+data-files:
+  data/*.ckd
+
+extra-source-files:
+ LICENSE.txt
+ .gitignore
+ Makefile
 
 ----------------------------------------
 -- REPOSITORY
@@ -218,6 +229,13 @@ library
  exposed-modules:
 
   GenovationControlPad
+
+  GenovationControlPad.Syntactic
+  GenovationControlPad.Semantic
+
+ other-modules:
+
+  Paths_genovation_control_pad
 
  ------------------------------
  ------------------------------
