@@ -3,6 +3,9 @@
 
 --------------------------------------------------
 
+{-| 
+
+-}
 module GenovationControlPad.Types where
 
 --------------------------------------------------
@@ -11,19 +14,119 @@ import "spiros" Prelude.Spiros
 
 --------------------------------------------------
 
+{-| 
+
+-}
 data DeviceConfig a = DeviceConfig
  { numberOfKeys :: KeyCount
- , configs      :: [KeyConfig a]
+ , config       :: DeviceConfig'
+ , keys         :: [KeyConfig a]
  }
 
 --------------------------------------------------
 
-data KeyCount
-  = CP24
-  | CP48
+{-| The "keypad properties" that configure the device as a whole.
+
+-}
+data DeviceConfig' = DeviceConfig'
+ { rollover :: KeyRollover
+ , pacing   :: CharacterPacing
+ , modes    :: LEDModes
+ }
 
 --------------------------------------------------
 
+{-| This many keys may be pressed down simultaneously.
+
+e.g. @KeyRollover 3@ means:
+Two keys, or three keys, may be pressed down simultaneously. 
+(Trivially, one key may always be pressed down "simultaneously")
+
+-}
+newtype KeyRollover = KeyRollover
+ { fromKeyRollover ::
+   Natural
+ }
+
+{-| Two keys.
+
+-}
+defaultKeyRollover :: KeyRollover
+defaultKeyRollover = KeyRollover 2
+
+--------------------------------------------------
+
+{-| Time between characters, in milliseconds.
+
+e.g. @CharacterPacing 2@ means:
+After each keypress 'Event' (i.e. a 'KeyEvent' or 'ModifierEvent'),
+wait two milliseconds before the next event.
+
+-}
+newtype CharacterPacing = CharacterPacing
+ { fromCharacterPacing ::
+   Natural
+ }
+
+{-| Two milliseconds.
+
+-}
+defaultCharacterPacing :: CharacterPacing
+defaultCharacterPacing = CharacterPacing 2
+
+----------------------------------------
+
+{-| 
+
+-}
+data LEDModes = LEDModes
+ { first  :: LEDMode
+ , second :: LEDMode
+ , third  :: LEDMode
+ }
+
+----------------------------------------
+
+{-| 
+
+-}
+data LEDMode
+ = LEDNotUsed
+ | LEDCapsLock
+ | LEDNumLock
+ | LEDScrollLock
+ | LEDLevelIndicator
+ | LEDPowerIndicator
+ | LEDControlByHostOrMacro
+
+defaultLEDMode :: LEDMode
+defaultLEDMode = LEDNotUsed
+
+--------------------------------------------------
+
+{-| How many keys does the keypad have?
+
+-}
+data KeyCount
+  = CP24 -- ^ the @"Genovation ControlPad CP24"@.
+  | CP48 -- ^ the @"Genovation ControlPad CP48"@.
+
+--------------------------------------------------
+
+{-| Keys are identified by their position on the grid,
+in the expected (for western languages) reading order,
+i.e. left-to-right then top-to-bottom.
+
+The 'CP48' uses all fourty-eight; while
+the 'CP24' uses the first twenty-four.
+
+This type is equivalent to the set of these numbers:
+
+@
+{0, 1, 2, ... 46, 47}
+@
+
+-}
 data KeyName
   = Key00
   | Key01
@@ -76,6 +179,9 @@ data KeyName
 
 --------------------------------------------------
 
+{-| 
+
+-}
 data KeyConfig a = KeyConfig
  { name             :: KeyName
  , level            :: Level
@@ -84,14 +190,20 @@ data KeyConfig a = KeyConfig
 
 --------------------------------------------------
 
+{-| 
+
+-}
 data Level
  = Level1
  | Level2
 
 --------------------------------------------------
 
+{-| 
+
+-}
 data KeyConfig' a = KeyConfig'
- { mode             :: Mode
+ { mode             :: EventsMode
  , repetition       :: AutoRepeat
  , events           :: Events
  , description      :: a
@@ -99,23 +211,48 @@ data KeyConfig' a = KeyConfig'
 
 --------------------------------------------------
 
+{-| 
+
+-}
 data AutoRepeat
  = AutoRepeatYes
  | AutoRepeatNo
 
 --------------------------------------------------
 
-data Mode
- = DefaultMode
+{-| 
+
+-}
+data EventsMode
+ = AutoSenseMode
+ | SeparateUpCodesMode
+ | MacroModeAdvanced
+ | LiteralModeAdvanced
+
+defaultEventsMode :: EventsMode
+defaultEventsMode = AutoSenseMode
 
 --------------------------------------------------
 
+{-| 
+
+-}
 newtype Events = Events { fromEvents :: 
  [Event]
  }
 
 --------------------------------------------------
 
+{-|
+
+* A key event, sent by the device to the computer.
+* A modifier event, sent by the device to the computer.
+Modifiers are "held" by sandwiching other 'Event's between 
+pressing it ('PressDown') and releasing it ('ReleaseUp') only after.
+* Delay (for example, by some hundreds of milliseconds) before sending other 'Event's. 
+(currently, the only "command" or "pseudo-event").
+
+-}
 data Event
  = KeyEvent      Key
  | ModifierEvent ModifierToggle
@@ -123,6 +260,10 @@ data Event
 
 --------------------------------------------------
 
+{-| Modifier-keys' events, unlike other keys' events,
+have an explicit 'Direction'.
+
+-}
 data ModifierToggle = ModifierToggle
  { direction :: Direction
  , modifier  :: Modifier
@@ -130,6 +271,9 @@ data ModifierToggle = ModifierToggle
 
 --------------------------------------------------
 
+{-| The modifier keys of the device's "generic keyboard" representation.
+
+-}
 data Modifier
  = ModifierCtrl
  | ModifierAlt
@@ -138,12 +282,18 @@ data Modifier
 
 --------------------------------------------------
 
+{-| 
+
+-}
 data Direction
  = PressDown
  | ReleaseUp
 
 --------------------------------------------------
 
+{-| The (non-modifier) keys of the device's "generic keyboard" representation.
+
+-}
 data Key
 
  = KeyA
@@ -237,6 +387,15 @@ data Key
 
 --------------------------------------------------
 
+{-|
+
+This type is equivalent to the set of these numbers:
+
+@
+{4, 8, 12, ... 496, 500}
+@
+
+-}
 data Delay
 
  = Delay004ms
