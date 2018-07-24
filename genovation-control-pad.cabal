@@ -231,6 +231,7 @@ library
   GenovationControlPad
   GenovationControlPad.Types
   GenovationControlPad.Render
+  GenovationControlPad.Encode
   GenovationControlPad.Parse
 
  other-modules:

@@ -11,34 +11,6 @@ import "sprios" Prelude.Spiros
 
 --------------------------------------------------
 
-data DeviceConfig a = DeviceConfig
- { numberOfKeys :: Natural
- , keys         :: [KeyConfig a]
- }
-
---------------------------------------------------
-
---------------------------------------------------
-
-data KeyConfig a = KeyConfig
- { name             :: KeyName
- , level            :: Level
- , config           :: KeyConfig' a
- }
-
-newtype KeyName = KeyName { fromKeyName ::
- Natural
- }
-
-data KeyConfig' a = KeyConfig'
- { autoRepetition   :: AutoRepeat
- , mode             :: Mode
- , macro            :: Macro
- , description      :: a
- }
-
---------------------------------------------------
-
 data ValidKeyConfig' a = ValidKeyConfig'
  { autoRepetition   :: AutoRepeat
  , mode             :: Mode
@@ -57,93 +29,15 @@ newtype ValidMacro = ValidMacro { fromValidMacro ::
 
 --------------------------------------------------
 
---------------------------------------------------
-
-data Level
- = LevelOne
- | LevelTwo
-
-data AutoRepeat
- = DoAutoRepeat
- | NoAutoRepeat
-
-data Mode
- = DefaultMode
-
---------------------------------------------------
-
 newtype Macro = Macro { fromMacro :: 
  [Event]
  }
-
---------------------------------------------------
-
-data Event
- = KeyEvent      Key
- | ModifierEvent ModifierToggle
- | CommandEvent  Delay
-
---------------------------------------------------
-
-data Key
- = A_Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
- | _Key
-
---------------------------------------------------
 
 data ModifierToggle = ModifierToggle
  { modifier  :: Modifier
  , direction :: Direction
  , position  :: Position
  }
-
-data Direction
- = PressDown
- | ReleaseUp
-
-data Position
- = RightSide
- | LeftSide
-
-data Modifier
- = Ctrl_Modifier
- | Alt_Modifier
- | Shift_Modifier
- | Win_Modifier
 
 --------------------------------------------------
 
