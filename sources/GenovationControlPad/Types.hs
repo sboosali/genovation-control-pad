@@ -3,7 +3,7 @@
 
 --------------------------------------------------
 
-{-| 
+{-|
 
 -}
 module GenovationControlPad.Types where
@@ -256,7 +256,7 @@ pressing it ('PressDown') and releasing it ('ReleaseUp') only after.
 data Event
  = KeyEvent      Key
  | ModifierEvent ModifierToggle
- | CommandEvent  Delay
+ | ActionEvent   Action
 
 --------------------------------------------------
 
@@ -275,10 +275,15 @@ data ModifierToggle = ModifierToggle
 
 -}
 data Modifier
+
  = ModifierCtrl
  | ModifierAlt
  | ModifierShift
  | ModifierWin
+
+ | ModifierRightCtrl 
+ | ModifierRightAlt
+ | ModifierRightShift
 
 --------------------------------------------------
 
@@ -384,6 +389,14 @@ data Key
  | KeyF18
  | KeyF19
  | KeyF20
+
+--------------------------------------------------
+
+{-|
+
+-}
+data Action
+ = DelayAction Delay
 
 --------------------------------------------------
 
