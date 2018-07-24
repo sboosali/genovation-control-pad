@@ -16,10 +16,6 @@ data DeviceConfig a = DeviceConfig
  , keys         :: [KeyConfig a]
  }
 
-newtype ValidDeviceConfig a = ValidDeviceConfig { fromValidDeviceConfig ::
- Map KeyName (KeyConfig a)
- }
-
 --------------------------------------------------
 
 --------------------------------------------------
@@ -30,6 +26,10 @@ data KeyConfig a = KeyConfig
  , config           :: KeyConfig' a
  }
 
+newtype KeyName = KeyName { fromKeyName ::
+ Natural
+ }
+
 data KeyConfig' a = KeyConfig'
  { autoRepetition   :: AutoRepeat
  , mode             :: Mode
@@ -37,8 +37,22 @@ data KeyConfig' a = KeyConfig'
  , description      :: a
  }
 
-newtype KeyName = KeyName { fromKeyName ::
- Natural
+--------------------------------------------------
+
+data ValidKeyConfig' a = ValidKeyConfig'
+ { autoRepetition   :: AutoRepeat
+ , mode             :: Mode
+ , macro            :: ValidMacro
+ , description      :: a
+ }
+
+data ValidKeyConfig a = ValidKeyConfig
+ { levelOne ::        ValidKeyConfig' a
+ , levelTwo :: Maybe (ValidKeyConfig' a)
+ }
+
+newtype ValidMacro = ValidMacro { fromValidMacro ::
+ Macro
  }
 
 --------------------------------------------------
@@ -170,3 +184,13 @@ serializeEvent
 serializeEvent = todo
 
 --------------------------------------------------
+
+
+
+--------------------------------------------------
+{- NOTES
+
+ = AutoRepeatOn
+ | AutoRepeatOff
+
+-}

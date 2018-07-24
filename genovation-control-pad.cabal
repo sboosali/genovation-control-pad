@@ -229,9 +229,9 @@ library
  exposed-modules:
 
   GenovationControlPad
-
-  GenovationControlPad.Syntactic
-  GenovationControlPad.Semantic
+  GenovationControlPad.Types
+  GenovationControlPad.Render
+  GenovationControlPad.Parse
 
  other-modules:
 

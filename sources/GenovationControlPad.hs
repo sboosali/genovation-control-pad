@@ -44,7 +44,8 @@ wraps:
 parseCkd :: Text -> Either String Ckd
 parseCkd = parseIni > fmap Ckd
 
---
+
+test :: IO ()
 test = do
  path <- getDataFileName "Simple.ckd"
  parsed <- readIniFile path

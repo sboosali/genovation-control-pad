@@ -34,7 +34,7 @@ clean:
 
 ##################################################
 update:
-	cabal update
+	cabal new-update
 
 ########################################
 rebuild: clean update configure build docs
