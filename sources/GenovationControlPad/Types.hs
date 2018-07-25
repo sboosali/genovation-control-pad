@@ -1,6 +1,8 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 {-# LANGUAGE RecordWildCards       #-}
 
+{-# LANGUAGE DeriveAnyClass        #-}
+
 --------------------------------------------------
 
 {-|
@@ -91,6 +93,7 @@ data LEDModes = LEDModes
 
 -}
 data LEDMode
+
  = LEDNotUsed
  | LEDCapsLock
  | LEDNumLock
@@ -98,6 +101,8 @@ data LEDMode
  | LEDLevelIndicator
  | LEDPowerIndicator
  | LEDControlByHostOrMacro
+
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
 defaultLEDMode :: LEDMode
 defaultLEDMode = LEDNotUsed
@@ -110,6 +115,8 @@ defaultLEDMode = LEDNotUsed
 data KeyCount
   = CP24 -- ^ the @"Genovation ControlPad CP24"@.
   | CP48 -- ^ the @"Genovation ControlPad CP48"@.
+
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
 --------------------------------------------------
 
@@ -128,6 +135,7 @@ This type is equivalent to the set of these numbers:
 
 -}
 data KeyName
+
   = Key00
   | Key01
   | Key02
@@ -177,6 +185,8 @@ data KeyName
   | Key46
   | Key47
 
+  deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
 --------------------------------------------------
 
 {-| 
@@ -196,6 +206,8 @@ data KeyConfig a = KeyConfig
 data Level
  = Level1
  | Level2
+
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
 --------------------------------------------------
 
@@ -218,6 +230,8 @@ data AutoRepeat
  = AutoRepeatYes
  | AutoRepeatNo
 
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
 --------------------------------------------------
 
 {-| 
@@ -228,6 +242,8 @@ data EventsMode
  | SeparateUpCodesMode
  | MacroModeAdvanced
  | LiteralModeAdvanced
+
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
 defaultEventsMode :: EventsMode
 defaultEventsMode = AutoSenseMode
@@ -285,6 +301,8 @@ data Modifier
  | ModifierRightAlt
  | ModifierRightShift
 
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
 --------------------------------------------------
 
 {-| 
@@ -293,6 +311,8 @@ data Modifier
 data Direction
  = PressDown
  | ReleaseUp
+
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
 --------------------------------------------------
 
@@ -389,6 +409,8 @@ data Key
  | KeyF18
  | KeyF19
  | KeyF20
+
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
 --------------------------------------------------
 
@@ -537,7 +559,7 @@ data Delay
  | Delay496ms
  | Delay500ms
 
- deriving (Eq,Enum)
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
 --------------------------------------------------
 

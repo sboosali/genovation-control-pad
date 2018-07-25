@@ -20,9 +20,70 @@ import qualified "text" Data.Text.Lazy as T
 import           "spiros" Prelude.Spiros
 --TODO import qualified "spiros" Spiros.Text as T
 
+import           "base"   Prelude        (toEnum)
+
 --------------------------------------------------
 
 type Encoder a = (a -> Text)
+
+--------------------------------------------------
+
+{-|
+
+@
+>>> fromDelay Delay008ms
+8
+@
+
+e.g.
+
+@
+(4 * (('fromEnum' 'Delay012ms') + 1))
+(4 * (2 + 1))
+(4 * 3)
+(12)
+@
+
+-}
+fromDelay :: Delay -> Int -- Natural -- fromIntegral (
+fromDelay x =
+  (fromEnum x + 1) * 4
+
+{-| Convert a number of milliseconds into its equivalent 'Delay'. Inputs that aren't a mulitple-of-4 are rounded-up. @Nothing@ when out-of-bounds.
+
+@
+'fromDelay' >>> 'toDelay'  'Just'
+@
+
+@
+>>> toDelay 0
+Nothing
+>>> toDelay `traverse` [1,2,3,4]
+Just [Delay004ms,Delay004ms,Delay004ms,Delay004ms]
+>>> toDelay 5
+Just Delay008ms
+>>> toDelay 499
+Just Delay500ms
+>>> toDelay 501
+Nothing
+@
+
+-}
+toDelay :: Int -> Maybe Delay
+toDelay
+  = checkBounds
+  > fmap ( divideByFourRoundingDown
+         > toEnum
+         )
+         -- `toEnum` is total,
+         -- when `checkBounds` is `Just`.
+  
+  where
+  divideByFourRoundingDown i = (i - 1) `quot` 4
+
+  checkBounds j
+    | (j >= 1) && (j <= 500) = Just j 
+    | otherwise              = Nothing
 
 --------------------------------------------------
 

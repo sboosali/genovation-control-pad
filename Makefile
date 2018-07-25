@@ -15,6 +15,10 @@ build: check
 	cabal new-build all
 
 ########################################
+repl:
+	cabal new-repl genovation-control-pad
+
+########################################
 watch:
 	@exec ./scripts/watch.sh &
 

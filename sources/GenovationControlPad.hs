@@ -2,7 +2,27 @@
 
 --------------------------------------------------
 
-module GenovationControlPad where
+{-|
+
+-}
+
+module GenovationControlPad 
+ ( module GenovationControlPad.Types
+ , module GenovationControlPad.Render
+ , module GenovationControlPad.Encode
+ , module GenovationControlPad.Parse
+
+ , module GenovationControlPad
+ ) where
+
+--------------------------------------------------
+
+import GenovationControlPad.Types
+import GenovationControlPad.Render
+import GenovationControlPad.Encode
+import GenovationControlPad.Parse
+
+--------------------------------------------------
 
 --------------------------------------------------
 
@@ -43,7 +63,6 @@ wraps:
 -}
 parseCkd :: Text -> Either String Ckd
 parseCkd = parseIni > fmap Ckd
-
 
 test :: IO ()
 test = do
