@@ -233,6 +233,7 @@ library
   GenovationControlPad.Render
   GenovationControlPad.Encode
   GenovationControlPad.Parse
+  GenovationControlPad.Create
 
  other-modules:
 

@@ -11,6 +11,7 @@ module GenovationControlPad
  , module GenovationControlPad.Render
  , module GenovationControlPad.Encode
  , module GenovationControlPad.Parse
+ , module GenovationControlPad.Create
 
  , module GenovationControlPad
  ) where
@@ -21,6 +22,7 @@ import GenovationControlPad.Types
 import GenovationControlPad.Render
 import GenovationControlPad.Encode
 import GenovationControlPad.Parse
+import GenovationControlPad.Create
 
 --------------------------------------------------
 
