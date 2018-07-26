@@ -24,7 +24,7 @@ author:              Spiros Boosalis
 maintainer:          samboosalis@gmail.com
 
 category:            Accessibility
-stability:           provisional
+stability:           experimental
 
 ----------------------------------------
 -- (EXTRA) FILES
