@@ -1,16 +1,11 @@
 ----------------------------------------
-packages:
 
- ./
+module Internal.GenovationControlPad where
 
-----------------------------------------
-optional-packages:
-
- ../spiros/
- ../enumerate/enumerate
- ../kbd/kbd
+--import Prelude.GenovationControlPad
 
 ----------------------------------------
 
+----------------------------------------
 
 ----------------------------------------

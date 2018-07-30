@@ -236,7 +236,8 @@ library
   GenovationControlPad.Create
 
  other-modules:
-
+  Prelude.GenovationControlPad
+  Internal.GenovationControlPad
   Paths_genovation_control_pad
 
  ------------------------------
@@ -264,6 +265,8 @@ library
    --------------------
 
   , spiros
+  , enumerate
+  , kbd
 
    --------------------
    -- other libraries.
