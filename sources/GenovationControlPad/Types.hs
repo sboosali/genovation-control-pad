@@ -7,7 +7,10 @@
 
 {-|
 
+
+
 -}
+
 module GenovationControlPad.Types where
 
 --------------------------------------------------
@@ -118,6 +121,14 @@ data KeyCount
 
  deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
+-- | @= 'defaultKeyCount'@
+instance Default KeyCount where
+  def = defaultKeyCount
+
+-- | @= 'CP24'@
+defaultKeyCount :: KeyCount
+defaultKeyCount = CP24
+
 --------------------------------------------------
 
 {-| Keys are identified by their position on the grid,
@@ -203,11 +214,21 @@ data KeyConfig a = KeyConfig
 {-| 
 
 -}
+
 data Level
+
  = Level1
  | Level2
 
  deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
+-- | 'Level1'
+defaultLevel :: Level
+defaultLevel = Level1
+
+-- | 'defaultLevel'
+instance Default Level where
+  def = defaultLevel
 
 --------------------------------------------------
 
@@ -226,11 +247,18 @@ data KeyConfig' a = KeyConfig'
 {-| 
 
 -}
+
 data AutoRepeat
+
  = AutoRepeatYes
  | AutoRepeatNo
 
  deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
+instance Default AutoRepeat where def = defaultAutoRepeat
+
+defaultAutoRepeat :: AutoRepeat
+defaultAutoRepeat = AutoRepeatYes
 
 --------------------------------------------------
 
@@ -244,6 +272,8 @@ data EventsMode
  | LiteralModeAdvanced
 
  deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
+instance Default EventsMode where def = defaultEventsMode
 
 defaultEventsMode :: EventsMode
 defaultEventsMode = AutoSenseMode
@@ -259,7 +289,7 @@ newtype Events = Events { fromEvents ::
 
 --------------------------------------------------
 
-{-|
+{-| Three kinds of events:
 
 * A key event, sent by the device to the computer.
 * A modifier event, sent by the device to the computer.
@@ -281,38 +311,62 @@ have an explicit 'Direction'.
 
 -}
 data ModifierToggle = ModifierToggle
- { direction :: Direction
- , modifier  :: Modifier
+ { modifier  :: ModifierKey
+ , direction :: PressDirection
+ , side      :: KeyboardSide
  }
+
+defaultModifierToggle :: ModifierKey -> ModifierToggle
+defaultModifierToggle modifier = ModifierToggle{..}
+  where
+  direction = defaultPressDirection
+  side      = LeftSideOfKeyboard
 
 --------------------------------------------------
 
 {-| The modifier keys of the device's "generic keyboard" representation.
 
 -}
-data Modifier
+data ModifierKey
 
  = ModifierCtrl
  | ModifierAlt
  | ModifierShift
  | ModifierWin
+ 
+ deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
- | ModifierRightCtrl 
- | ModifierRightAlt
- | ModifierRightShift
+--------------------------------------------------
+
+{-| Which side of the keyboard key is on
+(when the keyboard has multiples of the same key).
+
+-}
+data KeyboardSide
+
+ = LeftSideOfKeyboard
+ | RightSideOfKeyboard
 
  deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
+instance Default KeyboardSide where def = LeftSideOfKeyboard
 
 --------------------------------------------------
 
 {-| 
 
 -}
-data Direction
+data PressDirection
+
  = PressDown
  | ReleaseUp
 
  deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
+instance Default PressDirection where def = defaultPressDirection
+
+defaultPressDirection :: PressDirection
+defaultPressDirection = PressDown
 
 --------------------------------------------------
 
@@ -561,6 +615,14 @@ data Delay
 
  deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
 
+-- | @= 'Delay100ms'@
+defaultDelay :: Delay
+defaultDelay =  Delay100ms
+
+-- | @= 'defaultDelay'@
+instance Default Delay where
+  def = defaultDelay
+
 --------------------------------------------------
 
 -- newtype KeyCount = KeyCount { fromKeyCount ::
@@ -577,3 +639,20 @@ data Delay
 --   KeyCount 24 -> "Genovation ControlPad CP24"
 --   KeyCount 48 -> "Genovation ControlPad CP48"
 --   KeyCount _  -> ""
+
+{-
+
+data Modifier
+
+ = ModifierCtrl
+ | ModifierAlt
+ | ModifierShift
+ | ModifierWin
+
+ | ModifierRightCtrl 
+ | ModifierRightAlt
+ | ModifierRightShift
+
+-}
+
+--------------------------------------------------

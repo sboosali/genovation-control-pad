@@ -106,23 +106,26 @@ encodeEvent = \case
 encodeModifierToggle :: Encoder ModifierToggle
 encodeModifierToggle ModifierToggle{..}
    = encodeDirection direction
-  <> encodeModifier  modifier
+  <> encodeModifier (modifier, side)
 
 --------------------------------------------------
 
-encodeModifier :: Encoder Modifier
+encodeModifier :: Encoder (ModifierKey, KeyboardSide)
 encodeModifier = \case
- ModifierCtrl       -> "14"
- ModifierAlt        -> "11"
- ModifierShift      -> "12"
- ModifierWin        -> ""
- ModifierRightCtrl  -> ""
- ModifierRightAlt   -> ""
- ModifierRightShift -> ""
+
+ (ModifierCtrl,  RightSideOfKeyboard) -> "14"
+ (ModifierAlt,   RightSideOfKeyboard) -> "11"
+ (ModifierShift, RightSideOfKeyboard) -> "12"
+ (ModifierWin,   RightSideOfKeyboard) -> ""
+
+ (ModifierCtrl,   LeftSideOfKeyboard) -> ""
+ (ModifierAlt,    LeftSideOfKeyboard) -> ""
+ (ModifierShift,  LeftSideOfKeyboard) -> ""
+ (ModifierWin,    LeftSideOfKeyboard) -> ""
 
 --------------------------------------------------
 
-encodeDirection :: Encoder Direction
+encodeDirection :: Encoder PressDirection
 encodeDirection = \case
   PressDown -> ""
   ReleaseUp -> "f0"

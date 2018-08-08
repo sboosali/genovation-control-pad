@@ -48,6 +48,7 @@ import "ini" Data.Ini
 --------------------------------------------------
 
 {-| 
+
 -}
 newtype Ckd = Ckd { getCkd :: Ini }
  deriving (Show)
