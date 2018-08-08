@@ -37,6 +37,7 @@ extra-source-files:
  LICENSE.txt
  .gitignore
  Makefile
+ documents/*.yaml
 
 ----------------------------------------
 -- REPOSITORY
@@ -280,10 +281,15 @@ library
   -- , vinyl
 
    --------------------
+   -- data-format libraries.
+   --------------------
+  , aeson
+  , yaml
+  , ini
+
+   --------------------
    -- other libraries.
    --------------------
-
-  , ini
 
 
 ----------------------------------------

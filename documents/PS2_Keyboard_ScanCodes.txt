@@ -1,0 +1,1320 @@
+# |===============|======================|======================|======================|==========|===========|
+# |IBM Key Number | Set 1 (Make / Break) | Set 2 (Make / Break) | Set 3 (Make / Break) | BaseCase | UpperCase |
+# |===============|======================|======================|======================|==========|===========|
+
+- id: 1
+  PS1:
+    make:  "29"
+    break: "A9"
+  PS2:
+    make:  "0E"
+    break: "F0 0E"
+  PS3:
+    make:  "0E"
+    break: "F0 0E"
+  basecase: "`"
+  uppercase: "~"
+
+ 2
+PS:
+  make:  "02"
+  break: "82"
+PS:
+  make:  "16"
+  break: "F0 16"
+PS:
+  make:  "16"
+  break: "F0 16"
+ 1
+ !
+
+ 3
+PS:
+  make:  "03"
+  break: "83"
+PS:
+  make:  "1E"
+  break: "F0 1E"
+PS:
+  make:  "1E"
+  break: "F0 1E"
+ 2
+ @
+
+ 4
+PS:
+  make:  "04"
+  break: "84"
+PS:
+  make:  "26"
+  break: "F0 26"
+PS:
+  make:  "26"
+  break: "F0 26"
+ 3
+ #
+
+ 5
+PS:
+  make:  "05"
+  break: "85"
+PS:
+  make:  "25"
+  break: "F0 25"
+PS:
+  make:  "25"
+  break: "F0 25"
+ 4
+ $
+
+ 6
+PS:
+  make:  "06"
+  break: "86"
+PS:
+  make:  "2E"
+  break: "F0 2E"
+PS:
+  make:  "2E"
+  break: "F0 2E"
+ 5
+ %
+
+ 7
+PS:
+  make:  "07"
+  break: "87"
+PS:
+  make:  "36"
+  break: "F0 36"
+PS:
+  make:  "36"
+  break: "F0 36"
+ 6
+ \^
+
+ 8
+PS:
+  make:  "08"
+  break: "88"
+PS:
+  make:  "3D"
+  break: "F0 3D"
+PS:
+  make:  "3D"
+  break: "F0 3D"
+ 7
+ &
+
+ 9
+PS:
+  make:  "09"
+  break: "89"
+PS:
+  make:  "3E"
+  break: "F0 3E"
+PS:
+  make:  "3E"
+  break: "F0 3E"
+ 8
+ *
+
+ 10
+PS:
+  make:  "0A"
+  break: "8A"
+PS:
+  make:  "46"
+  break: "F0 46"
+PS:
+  make:  "46"
+  break: "F0 46"
+ 9
+ (
+
+ 11
+PS:
+  make:  "0B"
+  break: "8B"
+PS:
+  make:  "45"
+  break: "F0 45"
+PS:
+  make:  "45"
+  break: "F0 45"
+ 0
+ )
+
+ 12
+PS:
+  make:  "0C"
+  break: "8C"
+PS:
+  make:  "4E"
+  break: "F0 4E"
+PS:
+  make:  "4E"
+  break: "F0 4E"
+ -
+ \_
+
+ 13
+PS:
+  make:  "0D"
+  break: "8D"
+PS:
+  make:  "55"
+  break: "F0 55"
+PS:
+  make:  "55"
+  break: "F0 55"
+ =
+ +
+
+ 15
+PS:
+  make:  "0E"
+  break: "8E"
+PS:
+  make:  "66"
+  break: "F0 66"
+PS:
+  make:  "66"
+  break: "F0 66"
+ Backspace
+ 
+
+ 16
+PS:
+  make:  "0F"
+  break: "8F"
+PS:
+  make:  "0D"
+  break: "F0 0D"
+PS:
+  make:  "0D"
+  break: "F0 0D"
+ Tab
+ 
+
+ 17
+PS:
+  make:  "10"
+  break: "90"
+PS:
+  make:  "15"
+  break: "F0 15"
+PS:
+  make:  "15"
+  break: "F0 15"
+ q
+ Q
+
+ 18
+PS:
+  make:  "11"
+  break: "91"
+PS:
+  make:  "1D"
+  break: "F0 1D"
+PS:
+  make:  "1D"
+  break: "F0 1D"
+ w
+ W
+
+ 19
+PS:
+  make:  "12"
+  break: "92"
+PS:
+  make:  "24"
+  break: "F0 24"
+PS:
+  make:  "24"
+  break: "F0 24"
+ e
+ E
+
+ 20
+PS:
+  make:  "13"
+  break: "93"
+PS:
+  make:  "2D"
+  break: "F0 2D"
+PS:
+  make:  "2D"
+  break: "F0 2D"
+ r
+ R
+
+ 21
+PS:
+  make:  "14"
+  break: "94"
+PS:
+  make:  "2C"
+  break: "F0 2C"
+PS:
+  make:  "2C"
+  break: "F0 2C"
+ t
+ T
+
+ 22
+PS:
+  make:  "15"
+  break: "95"
+PS:
+  make:  "35"
+  break: "F0 35"
+PS:
+  make:  "35"
+  break: "F0 35"
+ y
+ Y
+
+ 23
+PS:
+  make:  "16"
+  break: "96"
+PS:
+  make:  "3C"
+  break: "F0 3C"
+PS:
+  make:  "3C"
+  break: "F0 3C"
+ u
+ U
+
+ 24
+PS:
+  make:  "17"
+  break: "97"
+PS:
+  make:  "43"
+  break: "F0 43"
+PS:
+  make:  "43"
+  break: "F0 43"
+ i
+ I
+
+ 25
+PS:
+  make:  "18"
+  break: "98"
+PS:
+  make:  "44"
+  break: "F0 44"
+PS:
+  make:  "44"
+  break: "F0 44"
+ o
+ O
+
+ 26
+PS:
+  make:  "19"
+  break: "99"
+PS:
+  make:  "4D"
+  break: "F0 4D"
+PS:
+  make:  "4D"
+  break: "F0 4D"
+ p
+ P
+
+ 27
+PS:
+  make:  "1A"
+  break: "9A"
+PS:
+  make:  "54"
+  break: "F0 54"
+PS:
+  make:  "54"
+  break: "F0 54"
+ [
+ {
+
+ 28
+PS:
+  make:  "1B"
+  break: "9B"
+PS:
+  make:  "5B"
+  break: "F0 5B"
+PS:
+  make:  "5B"
+  break: "F0 5B"
+ ]
+ }
+
+ 30
+PS:
+  make:  "3A"
+  break: "BA"
+PS:
+  make:  "58"
+  break: "F0 58"
+PS:
+  make:  "58"
+  break: "F0 58"
+ Caps Lock
+ 
+
+ 31
+PS:
+  make:  "1E"
+  break: "9E"
+PS:
+  make:  "1C"
+  break: "F0 1C"
+PS:
+  make:  "1C"
+  break: "F0 1C"
+ a
+ A
+
+ 32
+PS:
+  make:  "1F"
+  break: "9F"
+PS:
+  make:  "1B"
+  break: "F0 1B"
+PS:
+  make:  "1B"
+  break: "F0 1B"
+ s
+ S
+
+ 33
+PS:
+  make:  "20"
+  break: "A0"
+PS:
+  make:  "23"
+  break: "F0 23"
+PS:
+  make:  "23"
+  break: "F0 23"
+ d
+ D
+
+ 34
+PS:
+  make:  "21"
+  break: "A1"
+PS:
+  make:  "2B"
+  break: "F0 2B"
+PS:
+  make:  "2B"
+  break: "F0 2B"
+ f
+ F
+
+ 35
+PS:
+  make:  "22"
+  break: "A2"
+PS:
+  make:  "34"
+  break: "F0 34"
+PS:
+  make:  "34"
+  break: "F0 34"
+ g
+ G
+
+ 36
+PS:
+  make:  "23"
+  break: "A3"
+PS:
+  make:  "33"
+  break: "F0 33"
+PS:
+  make:  "33"
+  break: "F0 33"
+ h
+ H
+
+ 37
+PS:
+  make:  "24"
+  break: "A4"
+PS:
+  make:  "3B"
+  break: "F0 3B"
+PS:
+  make:  "3B"
+  break: "F0 3B"
+ j
+ J
+
+ 38
+PS:
+  make:  "25"
+  break: "A5"
+PS:
+  make:  "42"
+  break: "F0 42"
+PS:
+  make:  "42"
+  break: "F0 42"
+ k
+ K
+
+ 39
+PS:
+  make:  "26"
+  break: "A6"
+PS:
+  make:  "4B"
+  break: "F0 4B"
+PS:
+  make:  "4B"
+  break: "F0 4B"
+ l
+ L
+
+ 40
+PS:
+  make:  "27"
+  break: "A7"
+PS:
+  make:  "4C"
+  break: "F0 4C"
+PS:
+  make:  "4C"
+  break: "F0 4C"
+ ;
+ :
+
+ 41
+PS:
+  make:  "28"
+  break: "A8"
+PS:
+  make:  "52"
+  break: "F0 52"
+PS:
+  make:  "52"
+  break: "F0 52"
+ '
+ "
+
+ 43
+PS:
+  make:  "1C"
+  break: "9C"
+PS:
+  make:  "5A"
+  break: "F0 5A"
+PS:
+  make:  "5A"
+  break: "F0 5A"
+ Enter
+ Enter
+
+ 44
+PS:
+  make:  "2A"
+  break: "AA"
+PS:
+  make:  "12"
+  break: "F0 12"
+PS:
+  make:  "12"
+  break: "F0 12"
+ Left Shift
+ 
+
+ 46
+PS:
+  make:  "2C"
+  break: "AC"
+PS:
+  make:  "1A"
+  break: "F0 1A"
+PS:
+  make:  "1A"
+  break: "F0 1A"
+ z
+ Z
+
+ 47
+PS:
+  make:  "2D"
+  break: "AD"
+PS:
+  make:  "22"
+  break: "F0 22"
+PS:
+  make:  "22"
+  break: "F0 22"
+ x
+ X
+
+ 48
+PS:
+  make:  "2E"
+  break: "AE"
+PS:
+  make:  "21"
+  break: "F0 21"
+PS:
+  make:  "21"
+  break: "F0 21"
+ c
+ C
+
+ 49
+PS:
+  make:  "2F"
+  break: "AF"
+PS:
+  make:  "2A"
+  break: "F0 2A"
+PS:
+  make:  "2A"
+  break: "F0 2A"
+ v
+ V
+
+ 50
+PS:
+  make:  "30"
+  break: "B0"
+PS:
+  make:  "32"
+  break: "F0 32"
+PS:
+  make:  "32"
+  break: "F0 32"
+ b
+ B
+
+ 51
+PS:
+  make:  "31"
+  break: "B1"
+PS:
+  make:  "31"
+  break: "F0 31"
+PS:
+  make:  "31"
+  break: "F0 31"
+ n
+ N
+
+ 52
+PS:
+  make:  "32"
+  break: "B2"
+PS:
+  make:  "3A"
+  break: "F0 3A"
+PS:
+  make:  "3A"
+  break: "F0 3A"
+ m
+ M
+
+ 53
+PS:
+  make:  "33"
+  break: "B3"
+PS:
+  make:  "41"
+  break: "F0 41"
+PS:
+  make:  "41"
+  break: "F0 41"
+ ,
+ <
+
+ 54
+PS:
+  make:  "34"
+  break: "B4"
+PS:
+  make:  "49"
+  break: "F0 49"
+PS:
+  make:  "49"
+  break: "F0 49"
+ .
+ >
+
+ 55
+PS:
+  make:  "35"
+  break: "B5"
+PS:
+  make:  "4A"
+  break: "F0 4A"
+PS:
+  make:  "4A"
+  break: "F0 4A"
+ /
+ ?
+
+ 57
+PS:
+  make:  "36"
+  break: "B6"
+PS:
+  make:  "59"
+  break: "F0 59"
+PS:
+  make:  "59"
+  break: "F0 59"
+ Right Shift
+ 
+
+ 58
+PS:
+  make:  "1D"
+  break: "9D"
+PS:
+  make:  "14"
+  break: "F0 14"
+PS:
+  make:  "11"
+  break: "F0 11"
+ Left Ctrl
+ 
+
+ 60
+PS:
+  make:  "38"
+  break: "B8"
+PS:
+  make:  "11"
+  break: "F0 11"
+PS:
+  make:  "19"
+  break: "F0 19"
+ Left Alt
+ 
+
+ 61
+PS:
+  make:  "39"
+  break: "B9"
+PS:
+  make:  "29"
+  break: "F0 29"
+PS:
+  make:  "29"
+  break: "F0 29"
+ Spacebar
+ 
+
+ 62
+PS:
+  make:  "E0 38"
+  break: "E0 B8"
+PS:
+  make:  "E0 11"
+  break: "E0 F0 11"
+PS:
+  make:  "39"
+  break: "F0 39"
+ Right Alt
+ 
+
+ 64
+PS:
+  make:  "E0 1D"
+  break: "E0 9D"
+PS:
+  make:  "E0 14"
+  break: "E0 F0 14"
+PS:
+  make:  "58"
+  break: "F0 58"
+ Right Ctrl
+ 
+
+ 75
+PS:
+  make:  "E0 52"
+  break: "E0 D2 (base)"
+PS:
+  make:  "E0 70"
+  break: "E0 F0 70 (base)"
+PS:
+  make:  "67"
+  break: "F0 67"
+ Insert
+ 
+
+ 76
+PS:
+  make:  "E0 4B"
+  break: "E0 CB (base)"
+PS:
+  make:  "E0 71"
+  break: "E0 F0 71 (base)"
+PS:
+  make:  "64"
+  break: "F0 64"
+ Delete
+ 
+
+ 79
+PS:
+  make:  "E0 4B"
+  break: "E0 CB (base)"
+PS:
+  make:  "E0 6B"
+  break: "E0 F0 6B (base)"
+PS:
+  make:  "61"
+  break: "F0 61"
+ Left Arrow
+ 
+
+ 80
+PS:
+  make:  "E0 47"
+  break: "E0 C7 (base)"
+PS:
+  make:  "E0 6C"
+  break: "E0 F0 6C (base)"
+PS:
+  make:  "6E"
+  break: "F0 6E"
+ Home
+ 
+
+ 81
+PS:
+  make:  "E0 4F"
+  break: "E0 CF (base)"
+PS:
+  make:  "E0 69"
+  break: "E0 F0 69 (base)"
+PS:
+  make:  "65"
+  break: "F0 65"
+ End
+ 
+
+ 83
+PS:
+  make:  "E0 48"
+  break: "E0 C8 (base)"
+PS:
+  make:  "E0 75"
+  break: "E0 F0 75 (base)"
+PS:
+  make:  "63"
+  break: "F0 63"
+ Up Arrow
+ 
+
+ 84
+PS:
+  make:  "E0 50"
+  break: "E0 D0 (base)"
+PS:
+  make:  "E0 72"
+  break: "E0 F0 72 (base)"
+PS:
+  make:  "60"
+  break: "F0 60"
+ Down Arrow
+ 
+
+ 85
+PS:
+  make:  "E0 49"
+  break: "E0 C9 (base)"
+PS:
+  make:  "E0 7D"
+  break: "E0 F0 7D (base)"
+PS:
+  make:  "6F"
+  break: "F0 6F"
+ Page Up
+ 
+
+ 86
+PS:
+  make:  "E0 51"
+  break: "E0 D1 (base)"
+PS:
+  make:  "E0 7A"
+  break: "E0 F0 7A (base)"
+PS:
+  make:  "6D"
+  break: "F0 6D"
+ Page Down
+ 
+
+ 89
+PS:
+  make:  "E0 4D"
+  break: "E0 CD (base)"
+PS:
+  make:  "E0 74"
+  break: "E0 F0 74 (base)"
+PS:
+  make:  "6A"
+  break: "F0 6A"
+ Right Arrow
+ 
+
+ 90
+PS:
+  make:  "45"
+  break: "C5"
+PS:
+  make:  "77"
+  break: "F0 77"
+PS:
+  make:  "76"
+  break: "F0 76"
+ Num Lock
+ 
+
+ 91
+PS:
+  make:  "47"
+  break: "C7"
+PS:
+  make:  "6C"
+  break: "F0 6C"
+PS:
+  make:  "6C"
+  break: "F0 6C"
+ Keypad 7
+ 
+
+ 92
+PS:
+  make:  "4B"
+  break: "CB"
+PS:
+  make:  "6B"
+  break: "F0 6B"
+PS:
+  make:  "6B"
+  break: "F0 6B"
+ Keypad 4
+ 
+
+ 93
+PS:
+  make:  "4F"
+  break: "CF"
+PS:
+  make:  "69"
+  break: "F0 69"
+PS:
+  make:  "69"
+  break: "F0 69"
+ Keypad 1
+ 
+
+ 95
+PS:
+  make:  "E0 35"
+  break: "E0 B5 (base)"
+PS:
+  make:  "E0 4A"
+  break: "E0 F0 4A (base)"
+PS:
+  make:  "77"
+  break: "F0 77"
+ Keypad /
+ 
+
+ 96
+PS:
+  make:  "48"
+  break: "C8"
+PS:
+  make:  "75"
+  break: "F0 75"
+PS:
+  make:  "75"
+  break: "F0 75"
+ Keypad 8
+ 
+
+ 97
+PS:
+  make:  "4C"
+  break: "CC"
+PS:
+  make:  "73"
+  break: "F0 73"
+PS:
+  make:  "73"
+  break: "F0 73"
+ Keypad 5
+ 
+
+ 98
+PS:
+  make:  "50"
+  break: "D0"
+PS:
+  make:  "72"
+  break: "F0 72"
+PS:
+  make:  "72"
+  break: "F0 72"
+ Keypad 2
+ 
+
+ 99
+PS:
+  make:  "52"
+  break: "D2"
+PS:
+  make:  "70"
+  break: "F0 70"
+PS:
+  make:  "70"
+  break: "F0 70"
+ Keypad 0
+ 
+
+ 100
+PS:
+  make:  "37"
+  break: "B7"
+PS:
+  make:  "7C"
+  break: "F0 7C"
+PS:
+  make:  "7E"
+  break: "F0 7E"
+ Keypad *
+ 
+
+ 101
+PS:
+  make:  "49"
+  break: "C9"
+PS:
+  make:  "7D"
+  break: "F0 7D"
+PS:
+  make:  "7D"
+  break: "F0 7D"
+ Keypad 9
+ 
+
+ 102
+PS:
+  make:  "4D"
+  break: "CD"
+PS:
+  make:  "74"
+  break: "F0 74"
+PS:
+  make:  "74"
+  break: "F0 74"
+ Keypad 6
+ 
+
+ 103
+PS:
+  make:  "51"
+  break: "D1"
+PS:
+  make:  "7A"
+  break: "F0 7A"
+PS:
+  make:  "7A"
+  break: "F0 7A"
+ Keypad 3
+ 
+
+ 104
+PS:
+  make:  "53"
+  break: "D3"
+PS:
+  make:  "71"
+  break: "F0 71"
+PS:
+  make:  "71"
+  break: "F0 71"
+ Keypad .
+ 
+
+ 105
+PS:
+  make:  "4A"
+  break: "CA"
+PS:
+  make:  "7B"
+  break: "F0 7B"
+PS:
+  make:  "84"
+  break: "F0 84"
+ Keypad -
+ 
+
+ 106
+PS:
+  make:  "4E"
+  break: "CE"
+PS:
+  make:  "79"
+  break: "F0 79"
+PS:
+  make:  "7C"
+  break: "F0 7C"
+ Keypad +
+ 
+
+ 108
+PS:
+  make:  "E0 1C"
+  break: "E0 9C"
+PS:
+  make:  "E0 5A"
+  break: "E0 F0 5A"
+PS:
+  make:  "79"
+  break: "F0 79"
+ Keypad Enter
+ 
+
+ 110
+PS:
+  make:  "01"
+  break: "81"
+PS:
+  make:  "76"
+  break: "F0 76"
+PS:
+  make:  "08"
+  break: "F0 08"
+ Esc
+ 
+
+ 112
+PS:
+  make:  "3B"
+  break: "BB"
+PS:
+  make:  "05"
+  break: "F0 05"
+PS:
+  make:  "07"
+  break: "F0 07"
+ F1
+ 
+
+ 113
+PS:
+  make:  "3C"
+  break: "BC"
+PS:
+  make:  "06"
+  break: "F0 06"
+PS:
+  make:  "0F"
+  break: "F0 0F"
+ F2
+ 
+
+ 114
+PS:
+  make:  "3D"
+  break: "BD"
+PS:
+  make:  "04"
+  break: "F0 04"
+PS:
+  make:  "17"
+  break: "F0 17"
+ F3
+ 
+
+ 115
+PS:
+  make:  "3E"
+  break: "BE"
+PS:
+  make:  "0C"
+  break: "F0 0C"
+PS:
+  make:  "1F"
+  break: "F0 1F"
+ F4
+ 
+
+ 116
+PS:
+  make:  "3F"
+  break: "BF"
+PS:
+  make:  "03"
+  break: "F0 03"
+PS:
+  make:  "27"
+  break: "F0 27"
+ F5
+ 
+
+ 117
+PS:
+  make:  "40"
+  break: "C0"
+PS:
+  make:  "0B"
+  break: "F0 0B"
+PS:
+  make:  "2F"
+  break: "F0 2F"
+ F6
+ 
+
+ 118
+PS:
+  make:  "41"
+  break: "C1"
+PS:
+  make:  "83"
+  break: "F0 83"
+PS:
+  make:  "37"
+  break: "F0 37"
+ F7
+ 
+
+ 119
+PS:
+  make:  "42"
+  break: "C2"
+PS:
+  make:  "0A"
+  break: "F0 0A"
+PS:
+  make:  "3F"
+  break: "F0 3F"
+ F8
+ 
+
+ 120
+PS:
+  make:  "43"
+  break: "C3"
+PS:
+  make:  "01"
+  break: "F0 01"
+PS:
+  make:  "47"
+  break: "F0 47"
+ F9
+ 
+
+ 121
+PS:
+  make:  "44"
+  break: "C4"
+PS:
+  make:  "09"
+  break: "F0 09"
+PS:
+  make:  "4F"
+  break: "F0 4F"
+ F10
+ 
+
+ 122
+PS:
+  make:  "57"
+  break: "D7"
+PS:
+  make:  "78"
+  break: "F0 78"
+PS:
+  make:  "56"
+  break: "F0 56"
+ F11
+ 
+
+ 123
+PS:
+  make:  "58"
+  break: "D8"
+PS:
+  make:  "07"
+  break: "F0 07"
+PS:
+  make:  "5E"
+  break: "F0 5E"
+ F12
+ 
+
+ 124
+PS:
+  make:  "E0 2A E0 37"
+  break: "E0 B7 E0 AA"
+PS:
+  make:  "E0 12 E0 7C"
+  break: "E0 F0 7C E0 F0 12"
+PS:
+  make:  "57"
+  break: "F0 57"
+ Print Screen
+ 
+
+ 125
+PS:
+  make:  "46"
+  break: "C6"
+PS:
+  make:  "7E"
+  break: "F0 7E"
+PS:
+  make:  "5F"
+  break: "F0 5F"
+ Scroll Lock
+ 
+
+- id: 126
+  PS:
+    make:  "E1 1D 45"
+    break: "E1 9D C5"
+  PS:
+    make:  "E1 14 77 E1"
+    break: "F0 14 F0 77"
+  PS:
+    make:  "62"
+    break: "F0 62"
+  basecase: "Pause Break"
+  uppercase: ""
+
+id:
+ - 29
+ - 42
+PS1:
+  make:  "2B"
+  break: "AB"
+PS2:
+  make:  "5D"
+  break: "F0 5D"
+PS3:
+ - make:  "5C"
+   break: "F0 5C"
+ - make:  "53"
+   break: "F0 53"
+  basecase: "\"
+  uppercase: "|"

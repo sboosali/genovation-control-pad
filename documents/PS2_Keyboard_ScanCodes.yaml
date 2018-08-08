@@ -1,0 +1,1624 @@
+##################################################
+
+# Header:
+#
+# |===============|======================|======================|======================|==========|===========|
+# |IBM Key Number | Set 1 (Make / Break) | Set 2 (Make / Break) | Set 3 (Make / Break) | BaseCase | UpperCase |
+# |===============|======================|======================|======================|==========|===========|
+
+# Source:
+#
+#     http://www.vetra.com/scancodes.html
+
+##################################################
+- id: 1
+
+  basecase:  "`"
+  uppercase: "~"
+
+  PS1:
+    make:  "29"
+    break: "A9"
+  PS2:
+    make:  "0E"
+    break: "F0 0E"
+  PS3:
+    make:  "0E"
+    break: "F0 0E"
+    
+##################################################
+- id: 2
+
+  basecase:  "1"
+  uppercase: "!"
+
+  PS1:
+    make:  "02"
+    break: "82"
+  PS2:
+    make:  "16"
+    break: "F0 16"
+  PS3:
+    make:  "16"
+    break: "F0 16"
+
+##################################################
+- id: 3
+
+  basecase:  "2"
+  uppercase: "@"
+
+  PS1:
+    make:  "03"
+    break: "83"
+  PS2:
+    make:  "1E"
+    break: "F0 1E"
+  PS3:
+    make:  "1E"
+    break: "F0 1E"
+
+##################################################
+- id: 4
+
+  basecase:  "3"
+  uppercase: "#"
+
+  PS1:
+    make:  "04"
+    break: "84"
+  PS2:
+    make:  "26"
+    break: "F0 26"
+  PS3:
+    make:  "26"
+    break: "F0 26"
+
+##################################################
+- id: 5
+
+  basecase:  "4"
+  uppercase: "$"
+
+  PS1:
+    make:  "05"
+    break: "85"
+  PS2:
+    make:  "25"
+    break: "F0 25"
+  PS3:
+    make:  "25"
+    break: "F0 25"
+
+##################################################
+- id: 6
+
+  basecase:  "5"
+  uppercase: "%"
+
+  PS1:
+    make:  "06"
+    break: "86"
+  PS2:
+    make:  "2E"
+    break: "F0 2E"
+  PS3:
+    make:  "2E"
+    break: "F0 2E"
+
+##################################################
+- id: 7
+
+  basecase:  "6"
+  uppercase: "^"
+
+  PS1:
+    make:  "07"
+    break: "87"
+  PS2:
+    make:  "36"
+    break: "F0 36"
+  PS3:
+    make:  "36"
+    break: "F0 36"
+
+##################################################
+- id: 8
+
+  basecase:  "7"
+  uppercase: "&"
+
+  PS1:
+    make:  "08"
+    break: "88"
+  PS2:
+    make:  "3D"
+    break: "F0 3D"
+  PS3:
+    make:  "3D"
+    break: "F0 3D"
+
+##################################################
+- id: 9
+
+  basecase:  "8"
+  uppercase: "*"
+
+  PS1:
+    make:  "09"
+    break: "89"
+  PS2:
+    make:  "3E"
+    break: "F0 3E"
+  PS3:
+    make:  "3E"
+    break: "F0 3E"
+
+##################################################
+- id: 10
+
+  basecase:  "9"
+  uppercase: "("
+
+  PS1:
+    make:  "0A"
+    break: "8A"
+  PS2:
+    make:  "46"
+    break: "F0 46"
+  PS3:
+    make:  "46"
+    break: "F0 46"
+
+##################################################
+- id: 11
+
+  basecase:  "0"
+  uppercase: ")"
+
+  PS1:
+    make:  "0B"
+    break: "8B"
+  PS2:
+    make:  "45"
+    break: "F0 45"
+  PS3:
+    make:  "45"
+    break: "F0 45"
+
+##################################################
+- id: 12
+
+  basecase:  "-"
+  uppercase: "_"
+
+  PS1:
+    make:  "0C"
+    break: "8C"
+  PS2:
+    make:  "4E"
+    break: "F0 4E"
+  PS3:
+    make:  "4E"
+    break: "F0 4E"
+
+##################################################
+- id: 13
+
+  basecase:  "="
+  uppercase: "+"
+
+  PS1:
+    make:  "0D"
+    break: "8D"
+  PS2:
+    make:  "55"
+    break: "F0 55"
+  PS3:
+    make:  "55"
+    break: "F0 55"
+
+##################################################
+- id: 15
+
+  basecase:  "Backspace"
+
+  PS1:
+    make:  "0E"
+    break: "8E"
+  PS2:
+    make:  "66"
+    break: "F0 66"
+  PS3:
+    make:  "66"
+    break: "F0 66"
+
+##################################################
+- id: 16
+
+  basecase:  "Tab"
+
+  PS1:
+    make:  "0F"
+    break: "8F"
+  PS2:
+    make:  "0D"
+    break: "F0 0D"
+  PS3:
+    make:  "0D"
+    break: "F0 0D"
+
+##################################################
+- id: 17
+
+  basecase:  "q"
+  uppercase: "Q"
+
+  PS1:
+    make:  "10"
+    break: "90"
+  PS2:
+    make:  "15"
+    break: "F0 15"
+  PS3:
+    make:  "15"
+    break: "F0 15"
+
+##################################################
+- id: 18
+
+  basecase:  "w"
+  uppercase: "W"
+
+  PS1:
+    make:  "11"
+    break: "91"
+  PS2:
+    make:  "1D"
+    break: "F0 1D"
+  PS3:
+    make:  "1D"
+    break: "F0 1D"
+
+##################################################
+- id: 19
+
+  basecase:  "e"
+  uppercase: "E"
+
+  PS1:
+    make:  "12"
+    break: "92"
+  PS2:
+    make:  "24"
+    break: "F0 24"
+  PS3:
+    make:  "24"
+    break: "F0 24"
+
+##################################################
+- id: 20
+
+  basecase:  "r"
+  uppercase: "R"
+
+  PS1:
+    make:  "13"
+    break: "93"
+  PS2:
+    make:  "2D"
+    break: "F0 2D"
+  PS3:
+    make:  "2D"
+    break: "F0 2D"
+
+##################################################
+- id: 21
+
+  basecase:  "t"
+  uppercase: "T"
+
+  PS1:
+    make:  "14"
+    break: "94"
+  PS2:
+    make:  "2C"
+    break: "F0 2C"
+  PS3:
+    make:  "2C"
+    break: "F0 2C"
+
+##################################################
+- id: 22
+
+  basecase:  "y"
+  uppercase: "Y"
+
+  PS1:
+    make:  "15"
+    break: "95"
+  PS2:
+    make:  "35"
+    break: "F0 35"
+  PS3:
+    make:  "35"
+    break: "F0 35"
+
+##################################################
+- id: 23
+
+  basecase:  "u"
+  uppercase: "U"
+
+  PS1:
+    make:  "16"
+    break: "96"
+  PS2:
+    make:  "3C"
+    break: "F0 3C"
+  PS3:
+    make:  "3C"
+    break: "F0 3C"
+
+##################################################
+- id: 24
+
+  basecase:  "i"
+  uppercase: "I"
+
+  PS1:
+    make:  "17"
+    break: "97"
+  PS2:
+    make:  "43"
+    break: "F0 43"
+  PS3:
+    make:  "43"
+    break: "F0 43"
+
+##################################################
+- id: 25
+
+  basecase:  "o"
+  uppercase: "O"
+
+  PS1:
+    make:  "18"
+    break: "98"
+  PS2:
+    make:  "44"
+    break: "F0 44"
+  PS3:
+    make:  "44"
+    break: "F0 44"
+
+##################################################
+- id: 26
+
+  basecase:  "p"
+  uppercase: "P"
+
+  PS1:
+    make:  "19"
+    break: "99"
+  PS2:
+    make:  "4D"
+    break: "F0 4D"
+  PS3:
+    make:  "4D"
+    break: "F0 4D"
+
+##################################################
+- id: 27
+
+  basecase:  "["
+  uppercase: "{"
+
+  PS1:
+    make:  "1A"
+    break: "9A"
+  PS2:
+    make:  "54"
+    break: "F0 54"
+  PS3:
+    make:  "54"
+    break: "F0 54"
+
+##################################################
+- id: 28
+
+  basecase:  "]"
+  uppercase: "}"
+
+  PS1:
+    make:  "1B"
+    break: "9B"
+  PS2:
+    make:  "5B"
+    break: "F0 5B"
+  PS3:
+    make:  "5B"
+    break: "F0 5B"
+
+##################################################
+- id: 30
+
+  basecase:  "Caps Lock"
+
+  PS1:
+    make:  "3A"
+    break: "BA"
+  PS2:
+    make:  "58"
+    break: "F0 58"
+  PS3:
+    make:  "58"
+    break: "F0 58"
+
+##################################################
+- id: 31
+
+  basecase:  "a"
+  uppercase: "A"
+
+  PS1:
+    make:  "1E"
+    break: "9E"
+  PS2:
+    make:  "1C"
+    break: "F0 1C"
+  PS3:
+    make:  "1C"
+    break: "F0 1C"
+
+##################################################
+- id: 32
+
+  basecase:  "s"
+  uppercase: "S"
+
+  PS1:
+    make:  "1F"
+    break: "9F"
+  PS2:
+    make:  "1B"
+    break: "F0 1B"
+  PS3:
+    make:  "1B"
+    break: "F0 1B"
+
+##################################################
+- id: 33
+
+  basecase:  "d"
+  uppercase: "D"
+
+  PS1:
+    make:  "20"
+    break: "A0"
+  PS2:
+    make:  "23"
+    break: "F0 23"
+  PS3:
+    make:  "23"
+    break: "F0 23"
+
+##################################################
+- id: 34
+
+  basecase:  "f"
+  uppercase: "F"
+
+  PS1:
+    make:  "21"
+    break: "A1"
+  PS2:
+    make:  "2B"
+    break: "F0 2B"
+  PS3:
+    make:  "2B"
+    break: "F0 2B"
+
+##################################################
+- id: 35
+
+  basecase:  "g"
+  uppercase: "G"
+
+  PS1:
+    make:  "22"
+    break: "A2"
+  PS2:
+    make:  "34"
+    break: "F0 34"
+  PS3:
+    make:  "34"
+    break: "F0 34"
+
+##################################################
+- id: 36
+
+  basecase:  "h"
+  uppercase: "H"
+
+  PS1:
+    make:  "23"
+    break: "A3"
+  PS2:
+    make:  "33"
+    break: "F0 33"
+  PS3:
+    make:  "33"
+    break: "F0 33"
+
+##################################################
+- id: 37
+
+  basecase:  "j"
+  uppercase: "J"
+
+  PS1:
+    make:  "24"
+    break: "A4"
+  PS2:
+    make:  "3B"
+    break: "F0 3B"
+  PS3:
+    make:  "3B"
+    break: "F0 3B"
+
+##################################################
+- id: 38
+
+  basecase:  "k"
+  uppercase: "K"
+
+  PS1:
+    make:  "25"
+    break: "A5"
+  PS2:
+    make:  "42"
+    break: "F0 42"
+  PS3:
+    make:  "42"
+    break: "F0 42"
+
+##################################################
+- id: 39
+
+  basecase:  "l"
+  uppercase: "L"
+
+  PS1:
+    make:  "26"
+    break: "A6"
+  PS2:
+    make:  "4B"
+    break: "F0 4B"
+  PS3:
+    make:  "4B"
+    break: "F0 4B"
+
+##################################################
+- id: 40
+
+  basecase:  ";"
+  uppercase: ":"
+
+  PS1:
+    make:  "27"
+    break: "A7"
+  PS2:
+    make:  "4C"
+    break: "F0 4C"
+  PS3:
+    make:  "4C"
+    break: "F0 4C"
+
+##################################################
+- id: 41
+
+  basecase:  "'"
+  uppercase: "\""
+
+  PS1:
+    make:  "28"
+    break: "A8"
+  PS2:
+    make:  "52"
+    break: "F0 52"
+  PS3:
+    make:  "52"
+    break: "F0 52"
+
+##################################################
+- id: 43
+
+  basecase:  "Enter"
+  uppercase: "Enter"
+
+  PS1:
+    make:  "1C"
+    break: "9C"
+  PS2:
+    make:  "5A"
+    break: "F0 5A"
+  PS3:
+    make:  "5A"
+    break: "F0 5A"
+
+##################################################
+- id: 44
+
+  basecase:  "Shift"
+  side:      left
+
+  PS1:
+    make:  "2A"
+    break: "AA"
+  PS2:
+    make:  "12"
+    break: "F0 12"
+  PS3:
+    make:  "12"
+    break: "F0 12"
+
+##################################################
+- id: 46
+
+  basecase:  "z"
+  uppercase: "Z"
+
+  PS1:
+    make:  "2C"
+    break: "AC"
+  PS2:
+    make:  "1A"
+    break: "F0 1A"
+  PS3:
+    make:  "1A"
+    break: "F0 1A"
+
+##################################################
+- id: 47
+
+  basecase:  "x"
+  uppercase: "X"
+
+  PS1:
+    make:  "2D"
+    break: "AD"
+  PS2:
+    make:  "22"
+    break: "F0 22"
+  PS3:
+    make:  "22"
+    break: "F0 22"
+
+##################################################
+- id: 48
+
+  basecase:  "c"
+  uppercase: "C"
+
+  PS1:
+    make:  "2E"
+    break: "AE"
+  PS2:
+    make:  "21"
+    break: "F0 21"
+  PS3:
+    make:  "21"
+    break: "F0 21"
+
+##################################################
+- id: 49
+
+  basecase:  "v"
+  uppercase: "V"
+
+  PS1:
+    make:  "2F"
+    break: "AF"
+  PS2:
+    make:  "2A"
+    break: "F0 2A"
+  PS3:
+    make:  "2A"
+    break: "F0 2A"
+
+##################################################
+- id: 50
+
+  basecase:  "b"
+  uppercase: "B"
+
+  PS1:
+    make:  "30"
+    break: "B0"
+  PS2:
+    make:  "32"
+    break: "F0 32"
+  PS3:
+    make:  "32"
+    break: "F0 32"
+
+##################################################
+- id: 51
+
+  basecase:  "n"
+  uppercase: "N"
+
+  PS1:
+    make:  "31"
+    break: "B1"
+  PS2:
+    make:  "31"
+    break: "F0 31"
+  PS3:
+    make:  "31"
+    break: "F0 31"
+
+##################################################
+- id: 52
+
+  basecase:  "m"
+  uppercase: "M"
+
+  PS1:
+    make:  "32"
+    break: "B2"
+  PS2:
+    make:  "3A"
+    break: "F0 3A"
+  PS3:
+    make:  "3A"
+    break: "F0 3A"
+
+##################################################
+- id: 53
+
+  basecase:  ","
+  uppercase: "<"
+
+  PS1:
+    make:  "33"
+    break: "B3"
+  PS2:
+    make:  "41"
+    break: "F0 41"
+  PS3:
+    make:  "41"
+    break: "F0 41"
+
+##################################################
+- id: 54
+
+  basecase:  "."
+  uppercase: ">"
+
+  PS1:
+    make:  "34"
+    break: "B4"
+  PS2:
+    make:  "49"
+    break: "F0 49"
+  PS3:
+    make:  "49"
+    break: "F0 49"
+
+##################################################
+- id: 55
+
+  basecase:  "/"
+  uppercase: "?"
+
+  PS1:
+    make:  "35"
+    break: "B5"
+  PS2:
+    make:  "4A"
+    break: "F0 4A"
+  PS3:
+    make:  "4A"
+    break: "F0 4A"
+
+##################################################
+- id: 57
+
+  basecase:  "Shift"
+  side:      right
+
+  PS1:
+    make:  "36"
+    break: "B6"
+  PS2:
+    make:  "59"
+    break: "F0 59"
+  PS3:
+    make:  "59"
+    break: "F0 59"
+
+##################################################
+- id: 58
+
+  basecase:  "Ctrl"
+  side:      left
+
+  PS1:
+    make:  "1D"
+    break: "9D"
+  PS2:
+    make:  "14"
+    break: "F0 14"
+  PS3:
+    make:  "11"
+    break: "F0 11"
+
+##################################################
+- id: 60
+
+  basecase:  "Alt"
+  side:      left
+
+  PS1:
+    make:  "38"
+    break: "B8"
+  PS2:
+    make:  "11"
+    break: "F0 11"
+  PS3:
+    make:  "19"
+    break: "F0 19"
+
+##################################################
+- id: 61
+
+  basecase:  "Spacebar"
+
+  PS1:
+    make:  "39"
+    break: "B9"
+  PS2:
+    make:  "29"
+    break: "F0 29"
+  PS3:
+    make:  "29"
+    break: "F0 29"
+
+##################################################
+- id: 62
+
+  basecase:  "Alt"
+  side:      right
+
+  PS1:
+    make:  "E0 38"
+    break: "E0 B8"
+  PS2:
+    make:  "E0 11"
+    break: "E0 F0 11"
+  PS3:
+    make:  "39"
+    break: "F0 39"
+
+##################################################
+- id: 64
+
+  basecase:  "Ctrl"
+  side:      right
+
+  PS1:
+    make:  "E0 1D"
+    break: "E0 9D"
+  PS2:
+    make:  "E0 14"
+    break: "E0 F0 14"
+  PS3:
+    make:  "58"
+    break: "F0 58"
+
+##################################################
+- id: 75
+
+  basecase:  "Insert"
+
+  PS1:
+    make:  "E0 52"
+    break: "E0 D2"
+    base:  true
+  PS2:
+    make:  "E0 70"
+    break: "E0 F0 70"
+    base:  true
+  PS3:
+    make:  "67"
+    break: "F0 67"
+
+##################################################
+- id: 76
+
+  basecase:  "Delete"
+
+  PS1:
+    make:  "E0 4B"
+    break: "E0 CB"
+    base:  true
+  PS2:
+    make:  "E0 71"
+    break: "E0 F0 71"
+    base:  true
+  PS3:
+    make:  "64"
+    break: "F0 64"
+
+##################################################
+- id: 79
+
+  basecase:  "Left Arrow"
+
+  PS1:
+    make:  "E0 4B"
+    break: "E0 CB"
+    base:  true
+  PS2:
+    make:  "E0 6B"
+    break: "E0 F0 6B"
+    base:  true
+  PS3:
+    make:  "61"
+    break: "F0 61"
+
+##################################################
+- id: 80
+
+  basecase:  "Home"
+
+  PS1:
+    make:  "E0 47"
+    break: "E0 C7"
+    base:  true
+  PS2:
+    make:  "E0 6C"
+    break: "E0 F0 6C"
+    base:  true
+  PS3:
+    make:  "6E"
+    break: "F0 6E"
+
+##################################################
+- id: 81
+
+  basecase:  "End"
+
+  PS1:
+    make:  "E0 4F"
+    break: "E0 CF"
+    base:  true
+  PS2:
+    make:  "E0 69"
+    break: "E0 F0 69"
+    base:  true
+  PS3:
+    make:  "65"
+    break: "F0 65"
+
+##################################################
+- id: 83
+
+  basecase:  "Up Arrow"
+
+  PS1:
+    make:  "E0 48"
+    break: "E0 C8"
+    base:  true
+  PS2:
+    make:  "E0 75"
+    break: "E0 F0 75"
+    base:  true
+  PS3:
+    make:  "63"
+    break: "F0 63"
+
+##################################################
+- id: 84
+
+  basecase:  "Down Arrow"
+
+  PS1:
+    make:  "E0 50"
+    break: "E0 D0"
+    base:  true
+  PS2:
+    make:  "E0 72"
+    break: "E0 F0 72"
+    base:  true
+  PS3:
+    make:  "60"
+    break: "F0 60"
+
+##################################################
+- id: 85
+
+  basecase:  "Page Up"
+
+  PS1:
+    make:  "E0 49"
+    break: "E0 C9"
+    base:  true
+  PS2:
+    make:  "E0 7D"
+    break: "E0 F0 7D"
+    base:  true
+  PS3:
+    make:  "6F"
+    break: "F0 6F"
+
+##################################################
+- id: 86
+
+  basecase:  "Page Down"
+
+  PS1:
+    make:  "E0 51"
+    break: "E0 D1"
+    base:  true
+  PS2:
+    make:  "E0 7A"
+    break: "E0 F0 7A"
+    base:  true
+  PS3:
+    make:  "6D"
+    break: "F0 6D"
+
+##################################################
+- id: 89
+
+  basecase:  "Right Arrow"
+
+  PS1:
+    make:  "E0 4D"
+    break: "E0 CD"
+    base:  true
+  PS2:
+    make:  "E0 74"
+    break: "E0 F0 74"
+    base:  true
+  PS3:
+    make:  "6A"
+    break: "F0 6A"
+
+##################################################
+- id: 90
+
+  basecase:  "Num Lock"
+
+  PS1:
+    make:  "45"
+    break: "C5"
+  PS2:
+    make:  "77"
+    break: "F0 77"
+  PS3:
+    make:  "76"
+    break: "F0 76"
+
+##################################################
+- id: 91
+
+  basecase:  "7"
+  keypad:    true
+
+  PS1:
+    make:  "47"
+    break: "C7"
+  PS2:
+    make:  "6C"
+    break: "F0 6C"
+  PS3:
+    make:  "6C"
+    break: "F0 6C"
+
+##################################################
+- id: 92
+
+  basecase:  "4"
+  keypad:    true
+
+  PS1:
+    make:  "4B"
+    break: "CB"
+  PS2:
+    make:  "6B"
+    break: "F0 6B"
+  PS3:
+    make:  "6B"
+    break: "F0 6B"
+
+##################################################
+- id: 93
+
+  basecase:  "1"
+  keypad:    true
+
+  PS1:
+    make:  "4F"
+    break: "CF"
+  PS2:
+    make:  "69"
+    break: "F0 69"
+  PS3:
+    make:  "69"
+    break: "F0 69"
+
+##################################################
+- id: 95
+
+  basecase:  "/"
+  keypad:    true
+
+  PS1:
+    make:  "E0 35"
+    break: "E0 B5"
+    base:  true
+  PS2:
+    make:  "E0 4A"
+    break: "E0 F0 4A"
+    base:  true
+  PS3:
+    make:  "77"
+    break: "F0 77"
+
+##################################################
+- id: 96
+
+  basecase:  "8"
+  keypad:    true
+
+  PS1:
+    make:  "48"
+    break: "C8"
+  PS2:
+    make:  "75"
+    break: "F0 75"
+  PS3:
+    make:  "75"
+    break: "F0 75"
+
+##################################################
+- id: 97
+
+  basecase:  "5"
+  keypad:    true
+
+  PS1:
+    make:  "4C"
+    break: "CC"
+  PS2:
+    make:  "73"
+    break: "F0 73"
+  PS3:
+    make:  "73"
+    break: "F0 73"
+
+##################################################
+- id: 98
+
+  basecase:  "2"
+  keypad:    true
+
+  PS1:
+    make:  "50"
+    break: "D0"
+  PS2:
+    make:  "72"
+    break: "F0 72"
+  PS3:
+    make:  "72"
+    break: "F0 72"
+
+##################################################
+- id: 99
+
+  basecase:  "0"
+  keypad:    true
+
+  PS1:
+    make:  "52"
+    break: "D2"
+  PS2:
+    make:  "70"
+    break: "F0 70"
+  PS3:
+    make:  "70"
+    break: "F0 70"
+
+##################################################
+- id: 100
+
+  basecase:  "*"
+  keypad:    true
+
+  PS1:
+    make:  "37"
+    break: "B7"
+  PS2:
+    make:  "7C"
+    break: "F0 7C"
+  PS3:
+    make:  "7E"
+    break: "F0 7E"
+
+##################################################
+- id: 101
+
+  basecase:  "9"
+  keypad:    true
+
+  PS1:
+    make:  "49"
+    break: "C9"
+  PS2:
+    make:  "7D"
+    break: "F0 7D"
+  PS3:
+    make:  "7D"
+    break: "F0 7D"
+
+##################################################
+- id: 102
+
+  basecase:  "6"
+  keypad:    true
+
+  PS1:
+    make:  "4D"
+    break: "CD"
+  PS2:
+    make:  "74"
+    break: "F0 74"
+  PS3:
+    make:  "74"
+    break: "F0 74"
+
+##################################################
+- id: 103
+
+  basecase:  "3"
+  keypad:    true
+
+  PS1:
+    make:  "51"
+    break: "D1"
+  PS2:
+    make:  "7A"
+    break: "F0 7A"
+  PS3:
+    make:  "7A"
+    break: "F0 7A"
+
+##################################################
+- id: 104
+
+  basecase:  "."
+  keypad:    true
+
+  PS1:
+    make:  "53"
+    break: "D3"
+  PS2:
+    make:  "71"
+    break: "F0 71"
+  PS3:
+    make:  "71"
+    break: "F0 71"
+
+##################################################
+- id: 105
+
+  basecase:  "-"
+  keypad:    true
+
+  PS1:
+    make:  "4A"
+    break: "CA"
+  PS2:
+    make:  "7B"
+    break: "F0 7B"
+  PS3:
+    make:  "84"
+    break: "F0 84"
+
+##################################################
+- id: 106
+
+  basecase:  "+"
+  keypad:    true
+
+  PS1:
+    make:  "4E"
+    break: "CE"
+  PS2:
+    make:  "79"
+    break: "F0 79"
+  PS3:
+    make:  "7C"
+    break: "F0 7C"
+
+##################################################
+- id: 108
+
+  basecase:  "Enter"
+  keypad:    true
+
+  PS1:
+    make:  "E0 1C"
+    break: "E0 9C"
+  PS2:
+    make:  "E0 5A"
+    break: "E0 F0 5A"
+  PS3:
+    make:  "79"
+    break: "F0 79"
+
+##################################################
+- id: 110
+
+  basecase:  "Esc"
+
+  PS1:
+    make:  "01"
+    break: "81"
+  PS2:
+    make:  "76"
+    break: "F0 76"
+  PS3:
+    make:  "08"
+    break: "F0 08"
+
+##################################################
+- id: 112
+
+  basecase:  "F1"
+
+  PS1:
+    make:  "3B"
+    break: "BB"
+  PS2:
+    make:  "05"
+    break: "F0 05"
+  PS3:
+    make:  "07"
+    break: "F0 07"
+
+##################################################
+- id: 113
+
+  basecase:  "F2"
+
+  PS1:
+    make:  "3C"
+    break: "BC"
+  PS2:
+    make:  "06"
+    break: "F0 06"
+  PS3:
+    make:  "0F"
+    break: "F0 0F"
+
+##################################################
+- id: 114
+
+  basecase:  "F3"
+
+  PS1:
+    make:  "3D"
+    break: "BD"
+  PS2:
+    make:  "04"
+    break: "F0 04"
+  PS3:
+    make:  "17"
+    break: "F0 17"
+
+##################################################
+- id: 115
+
+  basecase:  "F4"
+
+  PS1:
+    make:  "3E"
+    break: "BE"
+  PS2:
+    make:  "0C"
+    break: "F0 0C"
+  PS3:
+    make:  "1F"
+    break: "F0 1F"
+
+##################################################
+- id: 116
+
+  basecase:  "F5"
+
+  PS1:
+    make:  "3F"
+    break: "BF"
+  PS2:
+    make:  "03"
+    break: "F0 03"
+  PS3:
+    make:  "27"
+    break: "F0 27"
+
+##################################################
+- id: 117
+
+  basecase:  "F6"
+
+  PS1:
+    make:  "40"
+    break: "C0"
+  PS2:
+    make:  "0B"
+    break: "F0 0B"
+  PS3:
+    make:  "2F"
+    break: "F0 2F"
+
+##################################################
+- id: 118
+
+  basecase:  "F7"
+
+  PS1:
+    make:  "41"
+    break: "C1"
+  PS2:
+    make:  "83"
+    break: "F0 83"
+  PS3:
+    make:  "37"
+    break: "F0 37"
+
+##################################################
+- id: 119
+
+  basecase:  "F8"
+
+  PS1:
+    make:  "42"
+    break: "C2"
+  PS2:
+    make:  "0A"
+    break: "F0 0A"
+  PS3:
+    make:  "3F"
+    break: "F0 3F"
+
+##################################################
+- id: 120
+
+  basecase:  "F9"
+
+  PS1:
+    make:  "43"
+    break: "C3"
+  PS2:
+    make:  "01"
+    break: "F0 01"
+  PS3:
+    make:  "47"
+    break: "F0 47"
+
+##################################################
+- id: 121
+
+  basecase:  "F10"
+
+  PS1:
+    make:  "44"
+    break: "C4"
+  PS2:
+    make:  "09"
+    break: "F0 09"
+  PS3:
+    make:  "4F"
+    break: "F0 4F"
+
+##################################################
+- id: 122
+
+  basecase:  "F11"
+
+  PS1:
+    make:  "57"
+    break: "D7"
+  PS2:
+    make:  "78"
+    break: "F0 78"
+  PS3:
+    make:  "56"
+    break: "F0 56"
+
+##################################################
+- id: 123
+
+  basecase:  "F12"
+
+  PS1:
+    make:  "58"
+    break: "D8"
+  PS2:
+    make:  "07"
+    break: "F0 07"
+  PS3:
+    make:  "5E"
+    break: "F0 5E"
+
+##################################################
+- id: 124
+
+  basecase:  "Print Screen"
+
+  PS1:
+    make:  "E0 2A E0 37"
+    break: "E0 B7 E0 AA"
+  PS2:
+    make:  "E0 12 E0 7C"
+    break: "E0 F0 7C E0 F0 12"
+  PS3:
+    make:  "57"
+    break: "F0 57"
+
+##################################################
+- id: 125
+
+  basecase:  "Scroll Lock"
+
+  PS1:
+    make:  "46"
+    break: "C6"
+  PS2:
+    make:  "7E"
+    break: "F0 7E"
+  PS3:
+    make:  "5F"
+    break: "F0 5F"
+
+##################################################
+- id: 126
+
+  basecase:  "Pause Break"
+
+  PS1:
+    make:  "E1 1D 45"
+    break: "E1 9D C5"
+  PS2:
+    make:  "E1 14 77 E1"
+    break: "F0 14 F0 77"
+  PS3:
+    make:  "62"
+    break: "F0 62"
+
+##################################################
+- id:
+  - 29
+  - 42
+
+  basecase:  "\\"
+  uppercase: "|"
+
+  PS1:
+    make:  "2B"
+    break: "AB"
+  PS2:
+    make:  "5D"
+    break: "F0 5D"
+  PS3:
+   - make:  "5C"
+     break: "F0 5C"
+   - make:  "53"
+     break: "F0 53"
+
+##################################################
