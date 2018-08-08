@@ -4,7 +4,7 @@ module GenovationControlPad.Parse where
 
 ----------------------------------------
 
-import Prelude.GenovationControlPad
+import Prelude_genovation_control_pad
 
 ----------------------------------------
 

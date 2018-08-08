@@ -15,7 +15,11 @@ module GenovationControlPad.Types where
 
 --------------------------------------------------
 
-import "spiros" Prelude.Spiros
+import Prelude_genovation_control_pad
+
+--------------------------------------------------
+
+
 
 --------------------------------------------------
 
@@ -333,8 +337,9 @@ data ModifierKey
  | ModifierAlt
  | ModifierShift
  | ModifierWin
- 
- deriving (Show,Read,Eq,Ord,Enum,Bounded,Generic,NFData,Hashable)
+
+ deriving stock    (Show,Read,Eq,Ord,Enum,Bounded,Ix,Generic)
+ deriving anyclass (Enumerable,NFData,Hashable)
 
 --------------------------------------------------
 

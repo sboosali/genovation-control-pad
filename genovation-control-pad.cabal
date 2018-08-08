@@ -150,6 +150,9 @@ common haskell2020
    DeriveTraversable
    DeriveLift
    StandaloneDeriving
+   DerivingStrategies
+   GeneralizedNewtypeDeriving
+   DeriveAnyClass
 
    --------------------
    -- syntax
@@ -236,7 +239,8 @@ library
   GenovationControlPad.Create
 
  other-modules:
-  Prelude.GenovationControlPad
+ 
+  Prelude_genovation_control_pad
   Internal.GenovationControlPad
   Paths_genovation_control_pad
 
