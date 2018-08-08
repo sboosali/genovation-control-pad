@@ -60,3 +60,21 @@ watch:
 
 ##################################################
 ##################################################
+
+####################
+sdist:
+	cabal check
+	cabal sdist
+
+####################
+release: sdist
+	mkdir -p "release/"
+	cp "dist/genovation-control-pad-*.tar.gz" "release/"
+        #TODO `VERSION` Makefile variable.
+        #TODO `cabal new-sdist`?
+
+# e.g.
+#    dist/genovation-control-pad-0.0.tar.gz
+
+##################################################
+##################################################

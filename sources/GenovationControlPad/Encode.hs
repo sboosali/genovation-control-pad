@@ -87,8 +87,6 @@ toDelay
 
 --------------------------------------------------
 
---------------------------------------------------
-
 encodeEvents :: Encoder Events
 encodeEvents = \case
  Events es -> (es <&> encodeEvent) & T.concat
