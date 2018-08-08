@@ -273,6 +273,13 @@ library
   , kbd
 
    --------------------
+   -- records libraries.
+   --------------------
+  , lens
+  , generic-lens
+  -- , vinyl
+
+   --------------------
    -- other libraries.
    --------------------
 
