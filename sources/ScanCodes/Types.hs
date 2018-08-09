@@ -7,6 +7,14 @@
 
 {-|
 
+
+===
+
+@"PS/2"@ abbreviates "Personal System/2".
+
+===
+
+
 ===
 
 
@@ -85,27 +93,6 @@ data KeyDescription = KeyDescription
 
 {-|
 
-
-===
-
-@"PS/2"@ abbreviates "Personal System/2".
-
-===
-
-
--}
-
-data Key
-
-  = Key
-  
-  deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
-  deriving anyclass (NFData,Hashable)
-
---------------------------------------------------
-
-{-|
-
 -}
 
 data Codes = Codes
@@ -151,6 +138,20 @@ data IsNumpad
   
   deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
   deriving anyclass (NFData,Hashable)
+
+--------------------------------------------------
+
+{-|
+
+-}
+
+data Key
+
+  = Key_
+
+  deriving stock    (Enum,Bounded,Ix)
+  deriving stock    (Show,Read,Eq,Ord,Lift,Generic)
+  deriving anyclass (Enumerable,NFData,Hashable)
 
 --------------------------------------------------
 --------------------------------------------------

@@ -234,32 +234,33 @@ library
  import: haskell2020
 
  hs-source-dirs:
-  sources
+                sources
 
  ------------------------------
  ------------------------------
  exposed-modules:
 
-  GenovationControlPad
-  GenovationControlPad.Types
-  GenovationControlPad.Render
-  GenovationControlPad.Encode
-  GenovationControlPad.Parse
-  GenovationControlPad.Create
+                 GenovationControlPad
+                 GenovationControlPad.Types
+                 GenovationControlPad.Render
+                 GenovationControlPad.Encode
+                 GenovationControlPad.Parse
+                 GenovationControlPad.Create
 
-  ScanCodes.Types
-  ScanCodes.PS2 
+                 ScanCodes.Types
+                 ScanCodes.Values
+                -- ScanCodes.PS2
 
  other-modules:
  
-  Prelude_genovation_control_pad
-  Prelude_scan_codes
+               Prelude_genovation_control_pad
+               Prelude_scan_codes
 
-  Internal.GenovationControlPad
-  Paths_genovation_control_pad
+               Internal.GenovationControlPad
+               Paths_genovation_control_pad
 
  autogen-modules:
-  Paths_genovation_control_pad
+                 Paths_genovation_control_pad
 
  ------------------------------
  ------------------------------
