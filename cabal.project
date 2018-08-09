@@ -1,8 +1,5 @@
 ----------------------------------------
-compiler: ghcjs
-
--- compiler:      ghc
--- with-compiler: ghc-8.6.1
+with-compiler: ghc-8.4.3
 
 ----------------------------------------
 packages:
@@ -42,6 +39,15 @@ package genovation-control-pad
 -- Notes -------------------------------
 ----------------------------------------
 
+-- Links:
+--     - http://cabal.readthedocs.io/en/latest/nix-local-build.html
+-- 
+
+----------------------------------------
+
+-- compiler:      ghc
+-- with-compiler: ghc-8.6.1
+
 -- compiler:
 --  ghc
 --  ghcjs
@@ -52,5 +58,9 @@ package genovation-control-pad
 --  /home/sboo/.nix-profile/bin/ghc-8.6.1
 --  /home/sboo/.nix-profile/bin/ghc-8.6.0.20180714
 --  /home/sboo/.nix-profile/bin/ghcjs
+
+----------------------------------------
+
+
 
 ----------------------------------------

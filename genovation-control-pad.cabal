@@ -63,6 +63,10 @@ source-repository head
 --   description: Enable ...
 --   manual:      True
 
+flag llvm
+  description: Compile via LLVM.
+  default:     False
+
 ----------------------------------------
 -- COMMON_STANZAS
 ----------------------------------------
@@ -129,6 +133,10 @@ common haskell2020
 
         -Wnoncanonical-monad-instances
         -Wnoncanonical-monadfail-instances
+
+ if flag(llvm)
+    ghc-options:
+                -fllvm -optlo-O3
 
  ------------------------------
  ------------------------------
