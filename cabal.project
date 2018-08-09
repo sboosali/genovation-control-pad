@@ -3,14 +3,33 @@ packages:
 
  ./
 
+ -- ./genovation-control-pad
+ -- ./ps2-scan-codes
+
 ----------------------------------------
 optional-packages:
 
- ../spiros/
+ ../spiros
  ../enumerate/enumerate
+ ../enumerate/enumerate-function
  ../kbd/kbd
 
 ----------------------------------------
 
+profiling: True
+
+----------------------------------------
+
+documentation:            True
+haddock-hyperlink-source: True
+
+----------------------------------------
+
+optimization: 2
+
+----------------------------------------
+
+package genovation-control-pad
+  optimization: 0
 
 ----------------------------------------

@@ -7,6 +7,10 @@
 
 ===
 
+
+
+===
+
 e.g. a scan-code specification:
 
 @
@@ -26,7 +30,14 @@ e.g. a scan-code specification:
 
 @
 
-from: <http://www.vetra.com/scancodes.html>.
+from <http://www.vetra.com/scancodes.html "PS/2 PC Keyboard Scan Sets Translation Table">
+
+===
+
+Links:
+
+* <https://en.wikipedia.org/wiki/PS/2_port>
+* <http://www.vetra.com/scancodes.html>
 
 ===
 
@@ -47,14 +58,24 @@ import Prelude_scan_codes
 
 {-|
 
--}
 
+===
+
+@"PS/2"@ abbreviates "Personal System/2".
+
+===
+
+
+-}
+data PS2Key
+  = PS2_
 
 --------------------------------------------------
 
 {-|
 
 -}
+data ScanCode
 
 --------------------------------------------------
 --------------------------------------------------

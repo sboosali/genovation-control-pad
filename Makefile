@@ -44,12 +44,6 @@ tags: compile
 	fast-tags -o ".sboo/tags" -R .
 	cat ".sboo/tags"
 
-########################
-docs: compile
-	cabal new-haddock 
-# 	cp -aRv dist-newstyle/build/*/*/unpacked-containers-0/doc/html/unpacked-containers/* docs
-# 	cd docs && git commit -a -m "update haddocks" && git push && cd ..
-
 ####################
 update:
 	cabal new-update
@@ -57,6 +51,28 @@ update:
 ####################
 watch:
 	@exec ./scripts/watch.sh &
+
+##################################################
+##################################################
+
+########################
+build-docs: compile
+	cabal new-haddock all
+# 	cp -aRv dist-newstyle/build/*/*/unpacked-containers-0/doc/html/unpacked-containers/* docs
+# 	cd docs && git commit -a -m "update haddocks" && git push && cd ..
+
+########################
+copy-docs: build-docs
+	rm -fr ".sboo/documentation/"
+	mkdir -p ".sboo/documentation/"
+	cp -aRv  ./dist-newstyle/build/*-*/ghc-*/genovation-control-pad-*/noopt/doc/html/genovation-control-pad/* ".sboo/documentation/"
+
+########################
+open-docs:
+	xdg-open ".sboo/documentation/index.html"
+
+########################
+docs: build-docs copy-docs open-docs
 
 ##################################################
 ##################################################
