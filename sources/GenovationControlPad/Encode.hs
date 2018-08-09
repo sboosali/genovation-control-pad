@@ -9,22 +9,34 @@
 -}
 module GenovationControlPad.Encode where
 
+--------------------------------------------------
+
+import Prelude_genovation_control_pad
+
 import GenovationControlPad.Types
 
 --------------------------------------------------
 
-import qualified "text" Data.Text.Lazy as T
+--import qualified "text" Data.Text.Lazy as T
 
 --------------------------------------------------
-
-import           "spiros" Prelude.Spiros
---TODO import qualified "spiros" Spiros.Text as T
 
 import           "base"   Prelude        (toEnum)
 
 --------------------------------------------------
 
-type Encoder a = (a -> Text)
+newtype Codes = Codes {
+  fromCodes ::
+      Text
+  }
+  deriving stock    (Show,Read,Eq,Ord,Generic)
+  deriving newtype  (Semigroup,Monoid,IsString)
+  deriving newtype  (NFData,Hashable)
+  --deriving anyclass (NFData,Hashable)
+
+--------------------------------------------------
+
+type Encoder a = (a -> Codes)
 
 --------------------------------------------------
 
@@ -89,7 +101,7 @@ toDelay
 
 encodeEvents :: Encoder Events
 encodeEvents = \case
- Events es -> (es <&> encodeEvent) & T.concat
+ Events es -> (es <&> encodeEvent) & mconcat
 
 --------------------------------------------------
 
