@@ -1,4 +1,10 @@
 ----------------------------------------
+compiler: ghcjs
+
+-- compiler:      ghc
+-- with-compiler: ghc-8.6.1
+
+----------------------------------------
 packages:
 
  ./
@@ -31,5 +37,20 @@ optimization: 2
 
 package genovation-control-pad
   optimization: 0
+
+----------------------------------------
+-- Notes -------------------------------
+----------------------------------------
+
+-- compiler:
+--  ghc
+--  ghcjs
+
+-- with-compiler:
+--  /home/sboo/.nix-profile/bin/ghc
+--  /home/sboo/.nix-profile/bin/ghc-8.4.3
+--  /home/sboo/.nix-profile/bin/ghc-8.6.1
+--  /home/sboo/.nix-profile/bin/ghc-8.6.0.20180714
+--  /home/sboo/.nix-profile/bin/ghcjs
 
 ----------------------------------------
