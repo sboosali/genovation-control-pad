@@ -239,11 +239,14 @@ library
   GenovationControlPad.Parse
   GenovationControlPad.Create
 
+  ScanCodes.Types
   ScanCodes.PS2 
 
  other-modules:
  
   Prelude_genovation_control_pad
+  Prelude_scan_codes
+
   Internal.GenovationControlPad
   Paths_genovation_control_pad
 
