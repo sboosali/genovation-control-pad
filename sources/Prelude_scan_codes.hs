@@ -6,7 +6,7 @@ module Prelude_scan_codes
 
 ----------------------------------------
 
-import "spiros" Prelude.Spiros
+import "spiros" Prelude.Spiros as X
 
 ----------------------------------------
 

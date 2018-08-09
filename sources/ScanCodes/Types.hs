@@ -1,3 +1,5 @@
+{-# LANGUAGE OverloadedStrings     #-}
+
 {-# LANGUAGE DuplicateRecordFields #-}
 {-# LANGUAGE RecordWildCards       #-}
 
@@ -59,6 +61,31 @@ import Prelude_scan_codes
 {-|
 
 
+
+-}
+
+data KeyDescription = KeyDescription
+
+  { key        :: Key           -- ^ 
+  , identifier :: Natural       -- ^ 
+  , isNumpad   :: IsNumpad      -- ^ 
+  , codes1     :: Codes         -- ^ 
+  , codes2     :: Codes         -- ^ 
+  , codes3     :: Codes         -- ^ 
+  }
+
+  deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
+  deriving anyclass (NFData,Hashable)
+  
+  -- , codingSet1     :: Code
+  -- , codingSet2     :: Code
+  -- , codingSet3     :: Code
+
+--------------------------------------------------
+
+{-|
+
+
 ===
 
 @"PS/2"@ abbreviates "Personal System/2".
@@ -67,15 +94,83 @@ import Prelude_scan_codes
 
 
 -}
-data PS2Key
-  = PS2_
+
+data Key
+
+  = Key
+  
+  deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
+  deriving anyclass (NFData,Hashable)
 
 --------------------------------------------------
 
 {-|
 
 -}
+
+data Codes = Codes
+
+  { pressCode   :: Code
+  , releaseCode :: Code
+  }
+  
+  deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
+  deriving anyclass (NFData,Hashable)
+  
+regularCode :: Code -> Codes
+regularCode pressCode = Codes{..}
+  where
+  releaseCode = "F0" <> pressCode
+
+--------------------------------------------------
+
+{-|
+
+-}
+
+newtype Code = Code
+
+  String
+
+  deriving stock    (Show,Read,Lift,Generic)
+  deriving newtype  (Eq,Ord,Semigroup,Monoid)
+  deriving newtype  (NFData,Hashable)
+
+instance IsString Code where fromString = coerce
+
+--------------------------------------------------
+
+{-|
+
+-}
+
+data IsNumpad
+
+  = YesNumpad
+  | NotNumpad
+  
+  deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
+  deriving anyclass (NFData,Hashable)
+
+--------------------------------------------------
+--------------------------------------------------
+{-
+
+
+
+data KeyCharacters
+  = PrintableKey
+  | UnprintableKey
+
+
+{-|
+
+-}
+
 data ScanCode
 
+
+
+-}
 --------------------------------------------------
 --------------------------------------------------
