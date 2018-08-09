@@ -1,4 +1,68 @@
 ==================================================
+
+
+
+
+
+
+==================================================
+Naming: Brackets
+
+https://en.wikipedia.org/wiki/Bracket
+
+----------------------------------------
+
+===
+
+Brackets:
+
+* round brackets (a.k.a. "parentheses")
+* square brackets
+* curly brackets (a.k.a. "braces")
+* angle brackets (a.k.a. "chevrons")
+
+===
+
+Unqualified "bracket":
+
+- in modern American, usually the square bracket;
+- in modern British, usually the round bracket.
+
+===
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+==================================================
+Naming: Quotes
+
+----------------------------------------
+
+guillemets	‹ ›  « »
+
+quotation marks	‘ ’  “ ”  ' '  " "
+
+----------------------------------------
+
+
+==================================================
+Naming: (Miscellaneous) Characters
+
+----------------------------------------
+
+pilcrow	¶
+
+slash, stroke, solidus	/  ⧸  ⁄
+
+underscore, understrike	_
+
+----------------------------------------
+
+
+==================================================
 == `deriving` templates
 
 -- nullary type (default)
