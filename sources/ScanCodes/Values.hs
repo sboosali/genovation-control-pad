@@ -26,209 +26,302 @@ import ScanCodes.Types
 {-|
 
 -}
+
 describeKey :: Key -> KeyDescription
 describeKey = \case
 
-  Key_Backtick            -> _
+  Key_Backtick            -> toKeyDescription2 Key_Backtick            001 "E0"
 
-  Key_1                   -> _
+  Key_1                   -> toKeyDescription2 Key_1                   002 "16"
 
-  Key_2                   -> _
+  Key_2                   -> toKeyDescription2 Key_2                   003 "1E"
 
-  Key_3                   -> _
+  Key_3                   -> toKeyDescription2 Key_3                   004 "26"
 
-  Key_4                   -> _
+  Key_4                   -> toKeyDescription2 Key_4                   005 "25"
 
-  Key_5                   -> _
+  Key_5                   -> toKeyDescription2 Key_5                   006 "2E"
 
-  Key_6                   -> _
+  Key_6                   -> toKeyDescription2 Key_6                   007 "36"
 
-  Key_7                   -> _
+  Key_7                   -> toKeyDescription2 Key_7                   008 "3D"
 
-  Key_8                   -> _
+  Key_8                   -> toKeyDescription2 Key_8                   009 "3E"
 
-  Key_9                   -> _
+  Key_9                   -> toKeyDescription2 Key_9                   010 "46"
 
-  Key_0                   -> _
+  Key_0                   -> toKeyDescription2 Key_0                   011 "45"
 
-  Key_Hyphen              -> _
+  Key_Hyphen              -> toKeyDescription2 Key_Hyphen              000 ""
 
-  Key_Equals              -> _
+  Key_Equals              -> toKeyDescription2 Key_Equals              000 ""
 
-  Key_Backspace           -> _
+  Key_Backspace           -> toKeyDescription2 Key_Backspace           000 ""
 
-  Key_Tab                 -> _
+  Key_Tab                 -> toKeyDescription2 Key_Tab                 000 ""
 
-  Key_Q                   -> _
+  Key_Q                   -> toKeyDescription2 Key_Q                   000 ""
 
-  Key_W                   -> _
+  Key_W                   -> toKeyDescription2 Key_W                   000 ""
 
-  Key_E                   -> _
+  Key_E                   -> toKeyDescription2 Key_E                   000 ""
 
-  Key_R                   -> _
+  Key_R                   -> toKeyDescription2 Key_R                   000 ""
 
-  Key_T                   -> _
+  Key_T                   -> toKeyDescription2 Key_T                   000 ""
 
-  Key_Y                   -> _
+  Key_Y                   -> toKeyDescription2 Key_Y                   000 ""
 
-  Key_U                   -> _
+  Key_U                   -> toKeyDescription2 Key_U                   000 ""
 
-  Key_I                   -> _
+  Key_I                   -> toKeyDescription2 Key_I                   000 ""
 
-  Key_O                   -> _
+  Key_O                   -> toKeyDescription2 Key_O                   000 ""
 
-  Key_P                   -> _
+  Key_P                   -> toKeyDescription2 Key_P                   000 ""
 
-  Key_OpenSquareBracket   -> _
+  Key_OpenSquareBracket   -> toKeyDescription2 Key_OpenSquareBracket   000 ""
 
-  Key_ClosedSquareBracket -> _
+  Key_ClosedSquareBracket -> toKeyDescription2 Key_ClosedSquareBracket 000 ""
 
-  Key_CapsLock            -> _
+  Key_CapsLock            -> toKeyDescription2 Key_CapsLock            000 ""
 
-  Key_A                   -> _
+  Key_A                   -> toKeyDescription2 Key_A                   000 ""
 
-  Key_S                   -> _
+  Key_S                   -> toKeyDescription2 Key_S                   000 ""
 
-  Key_D                   -> _
+  Key_D                   -> toKeyDescription2 Key_D                   000 ""
 
-  Key_F                   -> _
+  Key_F                   -> toKeyDescription2 Key_F                   000 ""
 
-  Key_G                   -> _
+  Key_G                   -> toKeyDescription2 Key_G                   000 ""
 
-  Key_H                   -> _
+  Key_H                   -> toKeyDescription2 Key_H                   000 ""
 
-  Key_J                   -> _
+  Key_J                   -> toKeyDescription2 Key_J                   000 ""
 
-  Key_K                   -> _
+  Key_K                   -> toKeyDescription2 Key_K                   000 ""
 
-  Key_L                   -> _
+  Key_L                   -> toKeyDescription2 Key_L                   000 ""
 
-  Key_Semicolon           -> _
+  Key_Semicolon           -> toKeyDescription2 Key_Semicolon           000 ""
 
-  Key_Apostrophe          -> _
+  Key_Apostrophe          -> toKeyDescription2 Key_Apostrophe          000 ""
 
-  Key_Enter               -> _
+  Key_Enter               -> toKeyDescription2 Key_Enter               000 ""
 
-  Key_Left_Shift          -> _
+  Key_Left_Shift          -> toKeyDescription2 Key_Left_Shift          000 ""
 
-  Key_Z                   -> _
+  Key_Z                   -> toKeyDescription2 Key_Z                   000 ""
 
-  Key_X                   -> _
+  Key_X                   -> toKeyDescription2 Key_X                   000 ""
 
-  Key_C                   -> _
+  Key_C                   -> toKeyDescription2 Key_C                   000 ""
 
-  Key_V                   -> _
+  Key_V                   -> toKeyDescription2 Key_V                   000 ""
 
-  Key_B                   -> _
+  Key_B                   -> toKeyDescription2 Key_B                   000 ""
 
-  Key_N                   -> _
+  Key_N                   -> toKeyDescription2 Key_N                   000 ""
 
-  Key_M                   -> _
+  Key_M                   -> toKeyDescription2 Key_M                   000 ""
 
-  Key_Comma               -> _
+  Key_Comma               -> toKeyDescription2 Key_Comma               000 ""
 
-  Key_Period              -> _
+  Key_Period              -> toKeyDescription2 Key_Period              000 ""
 
-  Key_Slash               -> _
+  Key_Slash               -> toKeyDescription2 Key_Slash               000 ""
 
-  Key_Right_Shift         -> _
+  Key_Right_Shift         -> toKeyDescription2 Key_Right_Shift         000 ""
 
-  Key_Left_Ctrl           -> _
+  Key_Left_Ctrl           -> toKeyDescription2 Key_Left_Ctrl           000 ""
   
-  Key_Left_Alt            -> _
+  Key_Left_Alt            -> toKeyDescription2 Key_Left_Alt            000 ""
 
-  Key_Spacebar            -> _
+  Key_Spacebar            -> toKeyDescription2 Key_Spacebar            000 ""
 
-  Key_Right_Alt           -> _
+  Key_Right_Alt           -> toKeyDescription2 Key_Right_Alt           000 ""
 
-  Key_Right_Ctrl          -> _
+  Key_Right_Ctrl          -> toKeyDescription2 Key_Right_Ctrl          000 ""
 
-  Key_Insert              -> _
+  Key_Insert              -> toKeyDescription2 Key_Insert              000 ""
 
-  Key_Delete              -> _
+  Key_Delete              -> toKeyDescription2 Key_Delete              000 ""
 
-  Key_ArrowLeft           -> _
+  Key_ArrowLeft           -> toKeyDescription2 Key_ArrowLeft           000 ""
 
-  Key_Home                -> _
+  Key_Home                -> toKeyDescription2 Key_Home                000 ""
 
-  Key_End                 -> _
+  Key_End                 -> toKeyDescription2 Key_End                 000 ""
 
-  Key_ArrowUp             -> _
+  Key_ArrowUp             -> toKeyDescription2 Key_ArrowUp             000 ""
 
-  Key_ArrowDown           -> _
+  Key_ArrowDown           -> toKeyDescription2 Key_ArrowDown           000 ""
 
-  Key_PageUp              -> _
+  Key_PageUp              -> toKeyDescription2 Key_PageUp              000 ""
 
-  Key_PageDown            -> _
+  Key_PageDown            -> toKeyDescription2 Key_PageDown            000 ""
 
-  Key_ArrowRight          -> _
+  Key_ArrowRight          -> toKeyDescription2 Key_ArrowRight          000 ""
 
-  Key_NumLock             -> _
+  Key_NumLock             -> toKeyDescription2 Key_NumLock             000 ""
 
-  Key_KeyPad_7            -> _
+  Key_KeyPad_7            -> toKeyDescription2 Key_KeyPad_7            000 ""
 
-  Key_KeyPad_4            -> _
+  Key_KeyPad_4            -> toKeyDescription2 Key_KeyPad_4            000 ""
 
-  Key_KeyPad_1            -> _
+  Key_KeyPad_1            -> toKeyDescription2 Key_KeyPad_1            000 ""
 
-  Key_KeyPad_Divide       -> _
+  Key_KeyPad_Divide       -> toKeyDescription2 Key_KeyPad_Divide       000 ""
 
-  Key_KeyPad_8            -> _
+  Key_KeyPad_8            -> toKeyDescription2 Key_KeyPad_8            000 ""
 
-  Key_KeyPad_5            -> _
+  Key_KeyPad_5            -> toKeyDescription2 Key_KeyPad_5            000 ""
 
-  Key_KeyPad_2            -> _
+  Key_KeyPad_2            -> toKeyDescription2 Key_KeyPad_2            000 ""
 
-  Key_KeyPad_0            -> _
+  Key_KeyPad_0            -> toKeyDescription2 Key_KeyPad_0            000 ""
 
-  Key_KeyPad_Multiply     -> _
+  Key_KeyPad_Multiply     -> toKeyDescription2 Key_KeyPad_Multiply     000 ""
 
-  Key_KeyPad_9            -> _
+  Key_KeyPad_9            -> toKeyDescription2 Key_KeyPad_9            000 ""
 
-  Key_KeyPad_6            -> _
+  Key_KeyPad_6            -> toKeyDescription2 Key_KeyPad_6            000 ""
 
-  Key_KeyPad_3            -> _
+  Key_KeyPad_3            -> toKeyDescription2 Key_KeyPad_3            000 ""
 
-  Key_KeyPad_Decimal      -> _
+  Key_KeyPad_Decimal      -> toKeyDescription2 Key_KeyPad_Decimal      000 ""
 
-  Key_KeyPad_Subtract     -> _
+  Key_KeyPad_Subtract     -> toKeyDescription2 Key_KeyPad_Subtract     000 ""
 
-  Key_KeyPad_Add          -> _
+  Key_KeyPad_Add          -> toKeyDescription2 Key_KeyPad_Add          000 ""
 
-  Key_KeyPad_Enter        -> _
+  Key_KeyPad_Enter        -> toKeyDescription2 Key_KeyPad_Enter        000 ""
 
-  Key_Esc                 -> _
+  Key_Esc                 -> toKeyDescription2 Key_Esc                 000 ""
 
-  Key_F1                  -> _
+  Key_F1                  -> toKeyDescription2 Key_F1                  000 ""
 
-  Key_F2                  -> _
+  Key_F2                  -> toKeyDescription2 Key_F2                  000 ""
 
-  Key_F3                  -> _
+  Key_F3                  -> toKeyDescription2 Key_F3                  000 ""
 
-  Key_F4                  -> _
+  Key_F4                  -> toKeyDescription2 Key_F4                  000 ""
 
-  Key_F5                  -> _
+  Key_F5                  -> toKeyDescription2 Key_F5                  000 ""
 
-  Key_F6                  -> _
+  Key_F6                  -> toKeyDescription2 Key_F6                  000 ""
 
-  Key_F7                  -> _
+  Key_F7                  -> toKeyDescription2 Key_F7                  000 ""
 
-  Key_F8                  -> _
+  Key_F8                  -> toKeyDescription2 Key_F8                  000 ""
 
-  Key_F9                  -> _
+  Key_F9                  -> toKeyDescription2 Key_F9                  000 ""
 
-  Key_F10                 -> _
+  Key_F10                 -> toKeyDescription2 Key_F10                 000 ""
 
-  Key_F11                 -> _
+  Key_F11                 -> toKeyDescription2 Key_F11                 000 ""
 
-  Key_F12                 -> _
+  Key_F12                 -> toKeyDescription2 Key_F12                 000 ""
 
-  Key_PrintScreen         -> _
+  Key_PrintScreen         -> toKeyDescription2 Key_PrintScreen         000 ""
 
-  Key_ScrollLock          -> _
+  Key_ScrollLock          -> toKeyDescription2 Key_ScrollLock          000 ""
 
-  Key_PauseBreak          -> _
+  Key_PauseBreak          -> toKeyDescription2 Key_PauseBreak          000 ""
 
-  Key_Backslash           -> _
+  Key_Backslash           -> toKeyDescription2 Key_Backslash           000 ""
 
+--------------------------------------------------
+
+
+
+--------------------------------------------------
+
+{-|
+
+only the @Set2@ scan-codes.
+
+-}
+
+toKeyDescription2
+  :: Key
+  -> Natural
+  -> Code
+  -> KeyDescription
+
+toKeyDescription2 key identifier code
+  = KeyDescription{..}
+
+  where
+
+  isNumpad   = NotNumpad
+  codes1     = Codes "" ""               -- TODO 
+  codes2     = codes
+  codes3     = codes
+
+  codes      = regularCode code
+
+--------------------------------------------------
+
+{-|
+
+-}
+
+regularKeyDescription
+  :: Key
+  -> Natural
+  -> Codes
+  -> Code
+  -> KeyDescription
+
+regularKeyDescription key identifier codes1 code
+  = KeyDescription{..}
+
+  where
+
+  isNumpad   = NotNumpad
+  codes2     = codes
+  codes3     = codes
+
+  codes      = regularCode code
+
+--------------------------------------------------
+
+{-|
+
+-}
+
+regularCode :: Code -> Codes
+regularCode pressCode = Codes{..}
+  where
+  releaseCode = "F0" <> pressCode
+
+--------------------------------------------------
+{-
+
+
+
+= KeyDescription{..}
+  where
+  key        = _
+  identifier = _
+  isNumpad   = _
+  codes1     = _
+  codes2     = _
+  codes3     = _
+
+
+
+data KeyDescription = KeyDescription
+
+  { key        :: Key           -- ^ 
+  , identifier :: Natural       -- ^ 
+  , isNumpad   :: IsNumpad      -- ^ 
+  , codes1     :: Codes         -- ^ 
+  , codes2     :: Codes         -- ^ 
+  , codes3     :: Codes         -- ^ 
+  }
+
+-}
 --------------------------------------------------

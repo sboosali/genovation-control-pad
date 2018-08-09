@@ -103,11 +103,6 @@ data Codes = Codes
   
   deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
   deriving anyclass (NFData,Hashable)
-  
-regularCode :: Code -> Codes
-regularCode pressCode = Codes{..}
-  where
-  releaseCode = "F0" <> pressCode
 
 --------------------------------------------------
 
