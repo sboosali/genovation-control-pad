@@ -68,18 +68,53 @@ import Prelude_scan_codes
 
 {-|
 
+The fields:
+
+* 'twinKeys': Other keys with the same name, and that by default, are translated into each other. As examples: 'Key_Right_Ctrl' and 'Key_Left_Ctrl'; 'Key_KeyPad_Enter' and 'Key_Enter'.
+* 'side': @Nothing@ means either that the key has no 'twinKeys', or if it does, the distinction isn't the side of the keyboard each twin is on.
+
+
+
+e.g.
+
+@
+
+'KeyDescription'
+  { 'key'        = 'Key_Backtick'
+  , 'number'     = 001
+  , 'isNumpad'   = 'def'
+  , 'codes1'     = 'Codes' { 'pressCode'   = "29"
+                       , 'releaseCode' = "A9"
+                       }
+  , 'codes2'     = 'Codes' { 'pressCode'   =   "0E"
+                       , 'releaseCode' = "F00E"
+                       }
+  , 'codes3'     = 'Codes' { 'pressCode'   =   "0E"
+                       , 'releaseCode' = "F00E"
+                       }
+  }
+
+@
 
 
 -}
 
 data KeyDescription = KeyDescription
 
-  { key        :: Key           -- ^ 
-  , identifier :: Natural       -- ^ 
-  , isNumpad   :: IsNumpad      -- ^ 
-  , codes1     :: Codes         -- ^ 
-  , codes2     :: Codes         -- ^ 
-  , codes3     :: Codes         -- ^ 
+  { key         :: Key                -- ^ 
+  , number      :: Natural            -- ^
+  
+  , codes1      :: Codes              -- ^ 
+  , codes2      :: Codes              -- ^ 
+  , codes3      :: Codes              -- ^
+
+  , twinKeys    :: [Key]              -- ^ 
+
+  , isModifier  :: IsModifier         -- ^
+  , isShiftable :: IsShiftable        -- ^
+  , isPrintable :: IsPrintable        -- ^
+  , isNumpad    :: IsNumpad           -- ^
+  , side        :: Maybe Side         -- ^
   }
 
   deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
@@ -91,7 +126,16 @@ data KeyDescription = KeyDescription
 
 --------------------------------------------------
 
-{-|
+{-| The byte-codes representing: pressing the key down; and releasing the key back up.
+
+
+e.g.
+
+@
+Code { 'pressCode'   = [      0x0E]
+     , 'releaseCode' = [0xF0, 0x0E]
+     }
+@
 
 -}
 
@@ -106,13 +150,13 @@ data Codes = Codes
 
 --------------------------------------------------
 
-{-|
+{-| Scan-Codes are bytestrings.
 
 -}
 
 newtype Code = Code
 
-  String
+  String --TODO :: [Word8]? ByteString?
 
   deriving stock    (Show,Read,Lift,Generic)
   deriving newtype  (Eq,Ord,Semigroup,Monoid)
@@ -120,25 +164,133 @@ newtype Code = Code
 
 instance IsString Code where fromString = coerce
 
+
 --------------------------------------------------
 
-{-|
+{-| Whether the key is on the keypad.
 
 -}
 
 data IsNumpad
 
-  = YesNumpad
-  | NotNumpad
+  = NotNumpad
+  | YesNumpad
   
-  deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
-  deriving anyclass (NFData,Hashable)
+  deriving stock    (Eq,Ord,Show,Read,Enum,Bounded,Ix,Lift,Generic)
+  deriving anyclass (Enumerable,NFData,Hashable)
+
+--TODO rename IsNumpad
+
+-------------------------
+
+-- | @= 'defaultIsNumpad'@
+instance Default IsNumpad where
+  def = defaultIsNumpad
+
+-- | @= 'NotNumpad'@
+defaultIsNumpad :: IsNumpad
+defaultIsNumpad = NotNumpad
+
+--------------------------------------------------
+
+{-| Whether the key can be shifted;
+i.e. the @Shift@ key affects it.
+
+-}
+
+data IsShiftable
+
+  = NotShiftable
+  | YesShiftable
+  
+  deriving stock    (Eq,Ord,Show,Read,Enum,Bounded,Ix,Lift,Generic)
+  deriving anyclass (Enumerable,NFData,Hashable)
+
+-------------------------
+
+-- | @= 'defaultIsShiftable'@
+instance Default IsShiftable where
+  def = defaultIsShiftable
+
+-- | @= 'YesShiftable'@
+defaultIsShiftable :: IsShiftable
+defaultIsShiftable = YesShiftable
+
+--------------------------------------------------
+
+{-| Whether the key represents a printable character.
+
+-}
+
+data IsPrintable
+
+  = NotPrintable
+  | YesPrintable
+
+  deriving stock    (Eq,Ord,Show,Read,Enum,Bounded,Ix,Lift,Generic)
+  deriving anyclass (Enumerable,NFData,Hashable)
+
+-------------------------
+
+-- | @= 'defaultIsPrintable'@
+instance Default IsPrintable where
+  def = defaultIsPrintable
+
+-- | @= 'YesPrintable'@
+defaultIsPrintable :: IsPrintable
+defaultIsPrintable = YesPrintable
+
+--------------------------------------------------
+
+{-| Whether the key is a modifier key.
+
+-}
+
+data IsModifier
+
+  = NotModifier
+  | YesModifier
+
+  deriving stock    (Eq,Ord,Show,Read,Enum,Bounded,Ix,Lift,Generic)
+  deriving anyclass (Enumerable,NFData,Hashable)
+
+-------------------------
+
+-- | @= 'defaultIsModifier'@
+instance Default IsModifier where
+  def = defaultIsModifier
+
+-- | @= 'NotModifier'@
+defaultIsModifier :: IsModifier
+defaultIsModifier = NotModifier
+
+--------------------------------------------------
+
+{-| If the key has "mulitples", whether it's on the left- or the right-side of the keyboard.
+
+-}
+
+data Side
+
+  = LeftSide
+  | RightSide
+
+  deriving stock    (Eq,Ord,Show,Read,Enum,Bounded,Ix,Lift,Generic)
+  deriving anyclass (Enumerable,NFData,Hashable)
+
+-------------------------
+
+-- | @= 'defaultIsSide'@
+instance Default Side where
+  def = defaultSide
+
+-- | @= 'LeftSide'@
+defaultSide :: Side
+defaultSide = LeftSide
 
 --------------------------------------------------
 
 {-|
-
-
 
 -}
 

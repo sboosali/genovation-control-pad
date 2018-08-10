@@ -30,7 +30,21 @@ import ScanCodes.Types
 describeKey :: Key -> KeyDescription
 describeKey = \case
 
-  Key_Backtick            -> toKeyDescription2 Key_Backtick            001 "E0"
+  Key_Backtick -> KeyDescription
+
+    { key        = Key_Backtick
+    , number     = 001
+    , isNumpad   = def
+    , codes1     = Codes { pressCode   = "29"
+                         , releaseCode = "A9"
+                         }
+    , codes2     = Codes { pressCode   =    "0E"
+                         , releaseCode = "F0 0E"
+                         }
+    , codes3     = Codes { pressCode   =    "0E"
+                         , releaseCode = "F0 0E"
+                         }
+    }
 
   Key_1                   -> toKeyDescription2 Key_1                   002 "16"
 
@@ -250,7 +264,7 @@ toKeyDescription2
   -> Code
   -> KeyDescription
 
-toKeyDescription2 key identifier code
+toKeyDescription2 key number code
   = KeyDescription{..}
 
   where
@@ -275,7 +289,7 @@ regularKeyDescription
   -> Code
   -> KeyDescription
 
-regularKeyDescription key identifier codes1 code
+regularKeyDescription key number codes1 code
   = KeyDescription{..}
 
   where
@@ -305,7 +319,7 @@ regularCode pressCode = Codes{..}
 = KeyDescription{..}
   where
   key        = _
-  identifier = _
+  number = _
   isNumpad   = _
   codes1     = _
   codes2     = _
@@ -316,7 +330,7 @@ regularCode pressCode = Codes{..}
 data KeyDescription = KeyDescription
 
   { key        :: Key           -- ^ 
-  , identifier :: Natural       -- ^ 
+  , number     :: Natural       -- ^ 
   , isNumpad   :: IsNumpad      -- ^ 
   , codes1     :: Codes         -- ^ 
   , codes2     :: Codes         -- ^ 

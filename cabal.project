@@ -23,7 +23,7 @@ profiling: True
 
 ----------------------------------------
 
-documentation:            True
+--documentation:            True
 haddock-hyperlink-source: True
 
 ----------------------------------------
