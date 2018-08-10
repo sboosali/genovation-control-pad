@@ -31,19 +31,23 @@ describeKey :: Key -> KeyDescription
 describeKey = \case
 
   Key_Backtick -> KeyDescription
-
-    { key        = Key_Backtick
-    , number     = 001
-    , isNumpad   = def
-    , codes1     = Codes { pressCode   = "29"
-                         , releaseCode = "A9"
-                         }
-    , codes2     = Codes { pressCode   =    "0E"
-                         , releaseCode = "F0 0E"
-                         }
-    , codes3     = Codes { pressCode   =    "0E"
-                         , releaseCode = "F0 0E"
-                         }
+    { key         = Key_Backtick
+    , number      = 001
+    , twinKeys    = []
+    , isModifier  = def
+    , isShiftable = YesShiftable
+    , isPrintable = YesPrintable
+    , isNumpad    = def
+    , side        = Nothing
+    , codes1      = Codes { pressCode   = "29"
+                          , releaseCode = "A9"
+                          }
+    , codes2      = Codes { pressCode   =   "0E"
+                          , releaseCode = "F00E"
+                          }
+    , codes3      = Codes { pressCode   =   "0E"
+                          , releaseCode = "F00E"
+                          }
     }
 
   Key_1                   -> toKeyDescription2 Key_1                   002 "16"

@@ -21,23 +21,21 @@
 
 ===
 
-e.g. a scan-code specification:
+e.g. a scan-code specification (from the `.yaml` file included in this package):
 
 @
-
 - id: 1
-  basecase:  "`"
-  uppercase: "~"
+  basecase:  \"`\"
+  uppercase: \"~\"
   PS1:
-    make:  "29"
-    break: "A9"
+    make:  \"29\"
+    break: \"A9\"
   PS2:
-    make:  "0E"
-    break: "F0 0E"
+    make:  \"0E\"
+    break: \"F00E\"
   PS3:
-    make:  "0E"
-    break: "F0 0E"
-
+    make:  \"0E\"
+    break: \"F00E\"
 @
 
 from <http://www.vetra.com/scancodes.html "PS/2 PC Keyboard Scan Sets Translation Table">
@@ -79,20 +77,25 @@ e.g.
 
 @
 
-'KeyDescription'
-  { 'key'        = 'Key_Backtick'
-  , 'number'     = 001
-  , 'isNumpad'   = 'def'
-  , 'codes1'     = 'Codes' { 'pressCode'   = "29"
-                       , 'releaseCode' = "A9"
-                       }
-  , 'codes2'     = 'Codes' { 'pressCode'   =   "0E"
-                       , 'releaseCode' = "F00E"
-                       }
-  , 'codes3'     = 'Codes' { 'pressCode'   =   "0E"
-                       , 'releaseCode' = "F00E"
-                       }
-  }
+  'KeyDescription'
+    { 'key'         = 'Key_Backtick'
+    , 'number'      = 001
+    , 'twinKeys'    = []
+    , 'isModifier'  = 'def'
+    , 'isShiftable' = 'YesShiftable'
+    , 'isPrintable' = 'YesPrintable'
+    , 'isNumpad'    = 'def'
+    , 'side'        = 'Nothing'
+    , 'codes1'      = 'Codes' { 'pressCode'   = "29"
+                          , 'releaseCode' = "A9"
+                          }
+    , 'codes2'      = 'Codes' { 'pressCode'   =   "0E"
+                          , 'releaseCode' = "F00E"
+                          }
+    , 'codes3'      = 'Codes' { 'pressCode'   =   "0E"
+                          , 'releaseCode' = "F00E"
+                          }
+    }
 
 @
 
@@ -103,11 +106,6 @@ data KeyDescription = KeyDescription
 
   { key         :: Key                -- ^ 
   , number      :: Natural            -- ^
-  
-  , codes1      :: Codes              -- ^ 
-  , codes2      :: Codes              -- ^ 
-  , codes3      :: Codes              -- ^
-
   , twinKeys    :: [Key]              -- ^ 
 
   , isModifier  :: IsModifier         -- ^
@@ -115,6 +113,10 @@ data KeyDescription = KeyDescription
   , isPrintable :: IsPrintable        -- ^
   , isNumpad    :: IsNumpad           -- ^
   , side        :: Maybe Side         -- ^
+
+  , codes1      :: Codes              -- ^ 
+  , codes2      :: Codes              -- ^ 
+  , codes3      :: Codes              -- ^
   }
 
   deriving stock    (Eq,Ord,Show,Read,Lift,Generic)
@@ -150,7 +152,7 @@ data Codes = Codes
 
 --------------------------------------------------
 
-{-| Scan-Codes are bytestrings.
+{-| 
 
 -}
 
@@ -164,6 +166,45 @@ newtype Code = Code
 
 instance IsString Code where fromString = coerce
 
+
+--------------------------------------------------
+
+{-| each scan-code is a bytestring.
+
+@
+ScanCode [      0x0E]
+ScanCode [0xF0, 0x0E]
+@
+
+-}
+
+newtype ScanCode = ScanCode
+
+  [Word8]
+
+  deriving stock    (Show,Read,Lift,Generic)
+  deriving newtype  (Eq,Ord,Semigroup,Monoid)
+  deriving newtype  (NFData,Hashable)
+
+instance IsList ScanCode where
+  type Item ScanCode = Word8
+  fromList = coerce
+  toList   = coerce
+
+-- {-| each scan-code is a bytestring.
+
+-- -}
+
+-- newtype ScanCode = ScanCode
+
+--   ByteString
+
+--   deriving stock    (Show,Read,Generic)
+--   deriving newtype  (Eq,Ord,Semigroup,Monoid)
+--   deriving newtype  (NFData,Hashable)
+
+-- instance IsString ScanCode where
+--   fromString = coerce > fromString
 
 --------------------------------------------------
 
@@ -564,6 +605,20 @@ data Key
 --------------------------------------------------
 --------------------------------------------------
 {-
+
+KeyDescription
+  { key         = Key_
+  , number      = _
+  , twinKeys    = []
+  , side        = Nothing
+  , isModifier  = def
+  , isShiftable = def
+  , isPrintable = def
+  , isNumpad    = def
+  , codes1      = _
+  , codes2      = _
+  , codes3      = _
+  }
 
 -}
 --------------------------------------------------
