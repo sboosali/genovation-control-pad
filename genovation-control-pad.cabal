@@ -244,6 +244,7 @@ library
                  ScanCodes.PS2
                  ScanCodes.PS2.Types
                  ScanCodes.PS2.Keys
+                 ScanCodes.PS2.Yaml
 
                  GenovationControlPad
                  GenovationControlPad.Types

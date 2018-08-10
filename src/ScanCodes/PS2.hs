@@ -30,21 +30,22 @@ describeKey :: Key -> KeyDescription
 describeKey = \case
 
   Key_Backtick -> KeyDescription
+
     { key         = Key_Backtick
     , twinKeys    = []
     , number      = 001
     , character   = Shiftable '`' '~'
     , isModifier  = def
     , isNumpad    = def
-    , side        = Nothing
+    , side        = def
     , codes1      = Codes { pressCode   = "29"
                           , releaseCode = "A9"
                           }
-    , codes2      = Codes { pressCode   =   "0E"
-                          , releaseCode = "F00E"
+    , codes2      = Codes { pressCode   =    "0E"
+                          , releaseCode = "F0 0E"
                           }
-    , codes3      = Codes { pressCode   =   "0E"
-                          , releaseCode = "F00E"
+    , codes3      = Codes { pressCode   =    "0E"
+                          , releaseCode = "F0 0E"
                           }
     }
 
@@ -319,6 +320,56 @@ regularCode pressCode = Codes{..}
 
 --------------------------------------------------
 {-
+
+-------------------------
+template
+
+  KeyDescription
+
+    { key         = Key_$1
+    , twinKeys    = []
+    , number      = 00$5
+    , character   = $6
+    , isModifier  = def
+    , isNumpad    = def
+    , side        = def
+    , codes1      = Codes { pressCode   = "$3"
+                          , releaseCode = "$4"
+                          }
+    , codes2      = Codes { pressCode   =    "$2"
+                          , releaseCode = "F0 $2"
+                          }
+    , codes3      = Codes { pressCode   =    "$2"
+                          , releaseCode = "F0 $2"
+                          }
+    }$0
+
+-------------------------
+e.g.
+
+  KeyDescription
+
+    { key         = Key_Backtick
+    , twinKeys    = []
+    , number      = 001
+    , character   = Shiftable '`' '~'
+    , isModifier  = def
+    , isNumpad    = def
+    , side        = def
+    , codes1      = Codes { pressCode   = "29"
+                          , releaseCode = "A9"
+                          }
+    , codes2      = Codes { pressCode   =    "0E"
+                          , releaseCode = "F0 0E"
+                          }
+    , codes3      = Codes { pressCode   =    "0E"
+                          , releaseCode = "F0 0E"
+                          }
+    }
+
+-------------------------
+
+
 
 -}
 --------------------------------------------------

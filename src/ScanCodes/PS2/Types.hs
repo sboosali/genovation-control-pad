@@ -101,10 +101,10 @@ e.g.
 
 data KeyDescription = KeyDescription
 
-  { key         :: Key                -- ^
+  { key         :: Key                -- ^TODO rm
 
-  , number      :: Natural            -- ^
-  , character   :: KeyCharacter       -- ^
+  , number      :: Natural            -- ^ the @"IBM Key Number"@.
+  , character   :: KeyCharacter       -- ^ 
   , twinKeys    :: [Key]              -- ^ 
   , isModifier  :: IsModifier         -- ^
   , isNumpad    :: IsNumpad           -- ^
