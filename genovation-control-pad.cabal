@@ -235,10 +235,15 @@ library
 
  hs-source-dirs:
                 sources
+                src
 
  ------------------------------
  ------------------------------
  exposed-modules:
+
+                 ScanCodes.PS2
+                 ScanCodes.PS2.Types
+                 ScanCodes.PS2.Keys
 
                  GenovationControlPad
                  GenovationControlPad.Types
@@ -247,17 +252,12 @@ library
                  GenovationControlPad.Parse
                  GenovationControlPad.Create
 
-                 ScanCodes.Types
-                 ScanCodes.Values
-                -- ScanCodes.PS2
-
  other-modules:
+               Prelude_scan_codes
  
                Prelude_genovation_control_pad
-               Prelude_scan_codes
-
-               Internal.GenovationControlPad
                Paths_genovation_control_pad
+               Internal.GenovationControlPad
 
  autogen-modules:
                  Paths_genovation_control_pad

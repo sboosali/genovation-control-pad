@@ -10,15 +10,14 @@
 
 -}
 
-module ScanCodes.Values where
+module ScanCodes.PS2 where
 
 --------------------------------------------------
 
 import Prelude_scan_codes
 
---------------------------------------------------
-
-import ScanCodes.Types
+import ScanCodes.PS2.Types
+import ScanCodes.PS2.Keys
 
 --------------------------------------------------
 --------------------------------------------------
@@ -32,11 +31,10 @@ describeKey = \case
 
   Key_Backtick -> KeyDescription
     { key         = Key_Backtick
-    , number      = 001
     , twinKeys    = []
+    , number      = 001
+    , character   = Shiftable '`' '~'
     , isModifier  = def
-    , isShiftable = YesShiftable
-    , isPrintable = YesPrintable
     , isNumpad    = def
     , side        = Nothing
     , codes1      = Codes { pressCode   = "29"
@@ -273,7 +271,11 @@ toKeyDescription2 key number code
 
   where
 
-  isNumpad   = NotNumpad
+  twinKeys   = []
+  character  = def
+  isModifier = def
+  isNumpad   = def
+  side       = Nothing
   codes1     = Codes "" ""               -- TODO 
   codes2     = codes
   codes3     = codes
@@ -282,27 +284,27 @@ toKeyDescription2 key number code
 
 --------------------------------------------------
 
-{-|
+-- {-|
 
--}
+-- -}
 
-regularKeyDescription
-  :: Key
-  -> Natural
-  -> Codes
-  -> Code
-  -> KeyDescription
+-- regularKeyDescription
+--   :: Key
+--   -> Natural
+--   -> Codes
+--   -> Code
+--   -> KeyDescription
 
-regularKeyDescription key number codes1 code
-  = KeyDescription{..}
+-- regularKeyDescription key number codes1 code
+--   = KeyDescription{..}
 
-  where
+--   where
 
-  isNumpad   = NotNumpad
-  codes2     = codes
-  codes3     = codes
+--   isNumpad   = NotNumpad
+--   codes2     = codes
+--   codes3     = codes
 
-  codes      = regularCode code
+--   codes      = regularCode code
 
 --------------------------------------------------
 
@@ -317,29 +319,6 @@ regularCode pressCode = Codes{..}
 
 --------------------------------------------------
 {-
-
-
-
-= KeyDescription{..}
-  where
-  key        = _
-  number = _
-  isNumpad   = _
-  codes1     = _
-  codes2     = _
-  codes3     = _
-
-
-
-data KeyDescription = KeyDescription
-
-  { key        :: Key           -- ^ 
-  , number     :: Natural       -- ^ 
-  , isNumpad   :: IsNumpad      -- ^ 
-  , codes1     :: Codes         -- ^ 
-  , codes2     :: Codes         -- ^ 
-  , codes3     :: Codes         -- ^ 
-  }
 
 -}
 --------------------------------------------------
