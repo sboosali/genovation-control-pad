@@ -6,6 +6,10 @@
 
 ===
 
+@
+"./data/PS2-ScanCodes.yaml"
+@
+
 ===
 
 -}
@@ -34,30 +38,79 @@ for a particular @JSON@(\/@YAML@) format.
 newtype KeyDescriptionJSON = KeyDescriptionJSON
   { toKeyDescription
     :: KeyDescription
-  }
-  deriving stock    (Show,Read,Lift,Generic)
-  deriving newtype  (Eq,Ord)
-  deriving newtype  (NFData,Hashable)
+  } deriving newtype (Show,Eq,Ord)
 
 -------------------------
 
 instance J.FromJSON KeyDescriptionJSON where
-  parseJSON = coerce (J.withObject "KeyDescription" go)
+  parseJSON = coerce (J.withObject "Key" pDescription)
     where
-    go o = KeyDescription
-      <$> o J..: "key"
-      <*> o J..: "number"
-      <*> o J..: "character"
-      <*> o J..: "twinKeys"
-      <*> o J..: "isModifier"
-      <*> o J..: "isNumpad"
-      <*> o J..: "side"
-      <*> o J..: "codes1"
-      <*> o J..: "codes2"
-      <*> o J..: "codes3"
+      
+    pDescription o = KeyDescription
+    
+      <$> o J..: "id"
+      <*> pCharacter o
+      <*> (pure def)
+      <*> (pure def)
+      <*> pKeypad o
+      <*> (pure def)
+      <*> pCodes "set1" o
+      <*> pCodes "set2" o
+      <*> pCodes "set3" o
+
+    pCharacter o = do
+      basecase  <- o J..:  "basecase"
+      uppercase <- o J..:? "uppercase"
+      let characters = toCharacters basecase uppercase
+      return characters
+
+    toCharacters :: String -> Maybe String -> KeyCharacter
+    toCharacters [x] Nothing    = Printable x
+    toCharacters [x] (Just [y]) = Shiftable x y
+    toCharacters _   _          = Unprintable
+
+    pKeypad o = do
+      x <- o J..:? "keypad"
+      let y = toKeypad x
+      return y
+
+    toKeypad = \case
+      Nothing    -> def
+      Just False -> NotNumpad
+      Just True  -> YesNumpad
+
+    pCodes k o1 = do
+      v1 <- o1 J..: k
+      codes <- J.withObject (toS k) pCodes' v1
+      return codes
+
+    pCodes' o2 = do
+        makeCode  <- o2 J..: "make"
+        breakCode <- o2 J..: "break"
+        let pressCode   = Code makeCode
+        let releaseCode = Code breakCode
+        return Codes{..}
 
 --------------------------------------------------
 
+{-
 
+      let isNumpad = x & maybe def (\case
+                                       )
+
+
+newtype KeyCharacterJSON = KeyCharacterJSON
+  { toKeyCharacter
+    :: KeyCharacter
+  } deriving newtype (Show,Eq,Ord)
+
+-------------------------
+
+instance J.FromJSON KeyCharacterJSON where
+  parseJSON = coerce (J.withObject "KeyCharacter" go)
+    where
+    go o = pure Unprintable
+
+-}
 
 --------------------------------------------------

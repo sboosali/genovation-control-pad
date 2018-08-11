@@ -6,6 +6,8 @@
 
 {-|
 
+
+
 -}
 module GenovationControlPad.Encode where
 
@@ -169,8 +171,34 @@ encodeDelay = \case
 
 
 --------------------------------------------------
+{-
+
+TODO:
+
+
+Turn LED1 on: E2 05
+Turn LED1 off: E2 04
+Flash LED1: E2 06
+
+
+Mute Volume: E0 23
+Increase Volume: E0 32
+Decrease Volume: E0 21
 
 
 
 
+
+esc is
+76
+not a Modifier
+
+
+menu is 
+E0 2F
+not a Modifier
+
+
+
+-}
 --------------------------------------------------
