@@ -1,0 +1,1612 @@
+##################################################
+- id: 1
+
+  basecase:  "`"
+  uppercase: "~"
+
+  set1:
+    make:  "29"
+    break: "A9"
+  set2:
+    make:  "0E"
+    break: "F0 0E"
+  set3:
+    make:  "0E"
+    break: "F0 0E"
+
+##################################################
+- id: 2
+
+  basecase:  "1"
+  uppercase: "!"
+
+  set1:
+    make:  "02"
+    break: "82"
+  set2:
+    make:  "16"
+    break: "F0 16"
+  set3:
+    make:  "16"
+    break: "F0 16"
+
+##################################################
+- id: 3
+
+  basecase:  "2"
+  uppercase: "@"
+
+  set1:
+    make:  "03"
+    break: "83"
+  set2:
+    make:  "1E"
+    break: "F0 1E"
+  set3:
+    make:  "1E"
+    break: "F0 1E"
+
+##################################################
+- id: 4
+
+  basecase:  "3"
+  uppercase: "#"
+
+  set1:
+    make:  "04"
+    break: "84"
+  set2:
+    make:  "26"
+    break: "F0 26"
+  set3:
+    make:  "26"
+    break: "F0 26"
+
+##################################################
+- id: 5
+
+  basecase:  "4"
+  uppercase: "$"
+
+  set1:
+    make:  "05"
+    break: "85"
+  set2:
+    make:  "25"
+    break: "F0 25"
+  set3:
+    make:  "25"
+    break: "F0 25"
+
+##################################################
+- id: 6
+
+  basecase:  "5"
+  uppercase: "%"
+
+  set1:
+    make:  "06"
+    break: "86"
+  set2:
+    make:  "2E"
+    break: "F0 2E"
+  set3:
+    make:  "2E"
+    break: "F0 2E"
+
+##################################################
+- id: 7
+
+  basecase:  "6"
+  uppercase: "^"
+
+  set1:
+    make:  "07"
+    break: "87"
+  set2:
+    make:  "36"
+    break: "F0 36"
+  set3:
+    make:  "36"
+    break: "F0 36"
+
+##################################################
+- id: 8
+
+  basecase:  "7"
+  uppercase: "&"
+
+  set1:
+    make:  "08"
+    break: "88"
+  set2:
+    make:  "3D"
+    break: "F0 3D"
+  set3:
+    make:  "3D"
+    break: "F0 3D"
+
+##################################################
+- id: 9
+
+  basecase:  "8"
+  uppercase: "*"
+
+  set1:
+    make:  "09"
+    break: "89"
+  set2:
+    make:  "3E"
+    break: "F0 3E"
+  set3:
+    make:  "3E"
+    break: "F0 3E"
+
+##################################################
+- id: 10
+
+  basecase:  "9"
+  uppercase: "("
+
+  set1:
+    make:  "0A"
+    break: "8A"
+  set2:
+    make:  "46"
+    break: "F0 46"
+  set3:
+    make:  "46"
+    break: "F0 46"
+
+##################################################
+- id: 11
+
+  basecase:  "0"
+  uppercase: ")"
+
+  set1:
+    make:  "0B"
+    break: "8B"
+  set2:
+    make:  "45"
+    break: "F0 45"
+  set3:
+    make:  "45"
+    break: "F0 45"
+
+##################################################
+- id: 12
+
+  basecase:  "-"
+  uppercase: "_"
+
+  set1:
+    make:  "0C"
+    break: "8C"
+  set2:
+    make:  "4E"
+    break: "F0 4E"
+  set3:
+    make:  "4E"
+    break: "F0 4E"
+
+##################################################
+- id: 13
+
+  basecase:  "="
+  uppercase: "+"
+
+  set1:
+    make:  "0D"
+    break: "8D"
+  set2:
+    make:  "55"
+    break: "F0 55"
+  set3:
+    make:  "55"
+    break: "F0 55"
+
+##################################################
+- id: 15
+
+  basecase:  "Backspace"
+
+  set1:
+    make:  "0E"
+    break: "8E"
+  set2:
+    make:  "66"
+    break: "F0 66"
+  set3:
+    make:  "66"
+    break: "F0 66"
+
+##################################################
+- id: 16
+
+  basecase:  "Tab"
+
+  set1:
+    make:  "0F"
+    break: "8F"
+  set2:
+    make:  "0D"
+    break: "F0 0D"
+  set3:
+    make:  "0D"
+    break: "F0 0D"
+
+##################################################
+- id: 17
+
+  basecase:  "q"
+  uppercase: "Q"
+
+  set1:
+    make:  "10"
+    break: "90"
+  set2:
+    make:  "15"
+    break: "F0 15"
+  set3:
+    make:  "15"
+    break: "F0 15"
+
+##################################################
+- id: 18
+
+  basecase:  "w"
+  uppercase: "W"
+
+  set1:
+    make:  "11"
+    break: "91"
+  set2:
+    make:  "1D"
+    break: "F0 1D"
+  set3:
+    make:  "1D"
+    break: "F0 1D"
+
+##################################################
+- id: 19
+
+  basecase:  "e"
+  uppercase: "E"
+
+  set1:
+    make:  "12"
+    break: "92"
+  set2:
+    make:  "24"
+    break: "F0 24"
+  set3:
+    make:  "24"
+    break: "F0 24"
+
+##################################################
+- id: 20
+
+  basecase:  "r"
+  uppercase: "R"
+
+  set1:
+    make:  "13"
+    break: "93"
+  set2:
+    make:  "2D"
+    break: "F0 2D"
+  set3:
+    make:  "2D"
+    break: "F0 2D"
+
+##################################################
+- id: 21
+
+  basecase:  "t"
+  uppercase: "T"
+
+  set1:
+    make:  "14"
+    break: "94"
+  set2:
+    make:  "2C"
+    break: "F0 2C"
+  set3:
+    make:  "2C"
+    break: "F0 2C"
+
+##################################################
+- id: 22
+
+  basecase:  "y"
+  uppercase: "Y"
+
+  set1:
+    make:  "15"
+    break: "95"
+  set2:
+    make:  "35"
+    break: "F0 35"
+  set3:
+    make:  "35"
+    break: "F0 35"
+
+##################################################
+- id: 23
+
+  basecase:  "u"
+  uppercase: "U"
+
+  set1:
+    make:  "16"
+    break: "96"
+  set2:
+    make:  "3C"
+    break: "F0 3C"
+  set3:
+    make:  "3C"
+    break: "F0 3C"
+
+##################################################
+- id: 24
+
+  basecase:  "i"
+  uppercase: "I"
+
+  set1:
+    make:  "17"
+    break: "97"
+  set2:
+    make:  "43"
+    break: "F0 43"
+  set3:
+    make:  "43"
+    break: "F0 43"
+
+##################################################
+- id: 25
+
+  basecase:  "o"
+  uppercase: "O"
+
+  set1:
+    make:  "18"
+    break: "98"
+  set2:
+    make:  "44"
+    break: "F0 44"
+  set3:
+    make:  "44"
+    break: "F0 44"
+
+##################################################
+- id: 26
+
+  basecase:  "p"
+  uppercase: "P"
+
+  set1:
+    make:  "19"
+    break: "99"
+  set2:
+    make:  "4D"
+    break: "F0 4D"
+  set3:
+    make:  "4D"
+    break: "F0 4D"
+
+##################################################
+- id: 27
+
+  basecase:  "["
+  uppercase: "{"
+
+  set1:
+    make:  "1A"
+    break: "9A"
+  set2:
+    make:  "54"
+    break: "F0 54"
+  set3:
+    make:  "54"
+    break: "F0 54"
+
+##################################################
+- id: 28
+
+  basecase:  "]"
+  uppercase: "}"
+
+  set1:
+    make:  "1B"
+    break: "9B"
+  set2:
+    make:  "5B"
+    break: "F0 5B"
+  set3:
+    make:  "5B"
+    break: "F0 5B"
+
+##################################################
+- id: 30
+
+  basecase:  "Caps Lock"
+
+  set1:
+    make:  "3A"
+    break: "BA"
+  set2:
+    make:  "58"
+    break: "F0 58"
+  set3:
+    make:  "58"
+    break: "F0 58"
+
+##################################################
+- id: 31
+
+  basecase:  "a"
+  uppercase: "A"
+
+  set1:
+    make:  "1E"
+    break: "9E"
+  set2:
+    make:  "1C"
+    break: "F0 1C"
+  set3:
+    make:  "1C"
+    break: "F0 1C"
+
+##################################################
+- id: 32
+
+  basecase:  "s"
+  uppercase: "S"
+
+  set1:
+    make:  "1F"
+    break: "9F"
+  set2:
+    make:  "1B"
+    break: "F0 1B"
+  set3:
+    make:  "1B"
+    break: "F0 1B"
+
+##################################################
+- id: 33
+
+  basecase:  "d"
+  uppercase: "D"
+
+  set1:
+    make:  "20"
+    break: "A0"
+  set2:
+    make:  "23"
+    break: "F0 23"
+  set3:
+    make:  "23"
+    break: "F0 23"
+
+##################################################
+- id: 34
+
+  basecase:  "f"
+  uppercase: "F"
+
+  set1:
+    make:  "21"
+    break: "A1"
+  set2:
+    make:  "2B"
+    break: "F0 2B"
+  set3:
+    make:  "2B"
+    break: "F0 2B"
+
+##################################################
+- id: 35
+
+  basecase:  "g"
+  uppercase: "G"
+
+  set1:
+    make:  "22"
+    break: "A2"
+  set2:
+    make:  "34"
+    break: "F0 34"
+  set3:
+    make:  "34"
+    break: "F0 34"
+
+##################################################
+- id: 36
+
+  basecase:  "h"
+  uppercase: "H"
+
+  set1:
+    make:  "23"
+    break: "A3"
+  set2:
+    make:  "33"
+    break: "F0 33"
+  set3:
+    make:  "33"
+    break: "F0 33"
+
+##################################################
+- id: 37
+
+  basecase:  "j"
+  uppercase: "J"
+
+  set1:
+    make:  "24"
+    break: "A4"
+  set2:
+    make:  "3B"
+    break: "F0 3B"
+  set3:
+    make:  "3B"
+    break: "F0 3B"
+
+##################################################
+- id: 38
+
+  basecase:  "k"
+  uppercase: "K"
+
+  set1:
+    make:  "25"
+    break: "A5"
+  set2:
+    make:  "42"
+    break: "F0 42"
+  set3:
+    make:  "42"
+    break: "F0 42"
+
+##################################################
+- id: 39
+
+  basecase:  "l"
+  uppercase: "L"
+
+  set1:
+    make:  "26"
+    break: "A6"
+  set2:
+    make:  "4B"
+    break: "F0 4B"
+  set3:
+    make:  "4B"
+    break: "F0 4B"
+
+##################################################
+- id: 40
+
+  basecase:  ";"
+  uppercase: ":"
+
+  set1:
+    make:  "27"
+    break: "A7"
+  set2:
+    make:  "4C"
+    break: "F0 4C"
+  set3:
+    make:  "4C"
+    break: "F0 4C"
+
+##################################################
+- id: 41
+
+  basecase:  "'"
+  uppercase: "\""
+
+  set1:
+    make:  "28"
+    break: "A8"
+  set2:
+    make:  "52"
+    break: "F0 52"
+  set3:
+    make:  "52"
+    break: "F0 52"
+
+##################################################
+- id: 43
+
+  basecase:  "Enter"
+  uppercase: "Enter"
+
+  set1:
+    make:  "1C"
+    break: "9C"
+  set2:
+    make:  "5A"
+    break: "F0 5A"
+  set3:
+    make:  "5A"
+    break: "F0 5A"
+
+##################################################
+- id: 44
+
+  basecase:  "Shift"
+  side:      left
+
+  set1:
+    make:  "2A"
+    break: "AA"
+  set2:
+    make:  "12"
+    break: "F0 12"
+  set3:
+    make:  "12"
+    break: "F0 12"
+
+##################################################
+- id: 46
+
+  basecase:  "z"
+  uppercase: "Z"
+
+  set1:
+    make:  "2C"
+    break: "AC"
+  set2:
+    make:  "1A"
+    break: "F0 1A"
+  set3:
+    make:  "1A"
+    break: "F0 1A"
+
+##################################################
+- id: 47
+
+  basecase:  "x"
+  uppercase: "X"
+
+  set1:
+    make:  "2D"
+    break: "AD"
+  set2:
+    make:  "22"
+    break: "F0 22"
+  set3:
+    make:  "22"
+    break: "F0 22"
+
+##################################################
+- id: 48
+
+  basecase:  "c"
+  uppercase: "C"
+
+  set1:
+    make:  "2E"
+    break: "AE"
+  set2:
+    make:  "21"
+    break: "F0 21"
+  set3:
+    make:  "21"
+    break: "F0 21"
+
+##################################################
+- id: 49
+
+  basecase:  "v"
+  uppercase: "V"
+
+  set1:
+    make:  "2F"
+    break: "AF"
+  set2:
+    make:  "2A"
+    break: "F0 2A"
+  set3:
+    make:  "2A"
+    break: "F0 2A"
+
+##################################################
+- id: 50
+
+  basecase:  "b"
+  uppercase: "B"
+
+  Set1:
+    make:  "30"
+    break: "B0"
+  set2:
+    make:  "32"
+    break: "F0 32"
+  set3:
+    make:  "32"
+    break: "F0 32"
+
+##################################################
+- id: 51
+
+  basecase:  "n"
+  uppercase: "N"
+
+  set1:
+    make:  "31"
+    break: "B1"
+  set2:
+    make:  "31"
+    break: "F0 31"
+  set3:
+    make:  "31"
+    break: "F0 31"
+
+##################################################
+- id: 52
+
+  basecase:  "m"
+  uppercase: "M"
+
+  set1:
+    make:  "32"
+    break: "B2"
+  set2:
+    make:  "3A"
+    break: "F0 3A"
+  set3:
+    make:  "3A"
+    break: "F0 3A"
+
+##################################################
+- id: 53
+
+  basecase:  ","
+  uppercase: "<"
+
+  set1:
+    make:  "33"
+    break: "B3"
+  set2:
+    make:  "41"
+    break: "F0 41"
+  set3:
+    make:  "41"
+    break: "F0 41"
+
+##################################################
+- id: 54
+
+  basecase:  "."
+  uppercase: ">"
+
+  set1:
+    make:  "34"
+    break: "B4"
+  set2:
+    make:  "49"
+    break: "F0 49"
+  set3:
+    make:  "49"
+    break: "F0 49"
+
+##################################################
+- id: 55
+
+  basecase:  "/"
+  uppercase: "?"
+
+  set1:
+    make:  "35"
+    break: "B5"
+  set2:
+    make:  "4A"
+    break: "F0 4A"
+  set3:
+    make:  "4A"
+    break: "F0 4A"
+
+##################################################
+- id: 57
+
+  basecase:  "Shift"
+  side:      right
+
+  set1:
+    make:  "36"
+    break: "B6"
+  set2:
+    make:  "59"
+    break: "F0 59"
+  set3:
+    make:  "59"
+    break: "F0 59"
+
+##################################################
+- id: 58
+
+  basecase:  "Ctrl"
+  side:      left
+
+  set1:
+    make:  "1D"
+    break: "9D"
+  set2:
+    make:  "14"
+    break: "F0 14"
+  set3:
+    make:  "11"
+    break: "F0 11"
+
+##################################################
+- id: 60
+
+  basecase:  "Alt"
+  side:      left
+
+  set1:
+    make:  "38"
+    break: "B8"
+  set2:
+    make:  "11"
+    break: "F0 11"
+  set3:
+    make:  "19"
+    break: "F0 19"
+
+##################################################
+- id: 61
+
+  basecase:  "Spacebar"
+
+  set1:
+    make:  "39"
+    break: "B9"
+  set2:
+    make:  "29"
+    break: "F0 29"
+  set3:
+    make:  "29"
+    break: "F0 29"
+
+##################################################
+- id: 62
+
+  basecase:  "Alt"
+  side:      right
+
+  set1:
+    make:  "E0 38"
+    break: "E0 B8"
+  set2:
+    make:  "E0 11"
+    break: "E0 F0 11"
+  set3:
+    make:  "39"
+    break: "F0 39"
+
+##################################################
+- id: 64
+
+  basecase:  "Ctrl"
+  side:      right
+
+  set1:
+    make:  "E0 1D"
+    break: "E0 9D"
+  set2:
+    make:  "E0 14"
+    break: "E0 F0 14"
+  set3:
+    make:  "58"
+    break: "F0 58"
+
+##################################################
+- id: 75
+
+  basecase:  "Insert"
+
+  set1:
+    make:  "E0 52"
+    break: "E0 D2"
+    base:  true
+  set2:
+    make:  "E0 70"
+    break: "E0 F0 70"
+    base:  true
+  set3:
+    make:  "67"
+    break: "F0 67"
+
+##################################################
+- id: 76
+
+  basecase:  "Delete"
+
+  set1:
+    make:  "E0 4B"
+    break: "E0 CB"
+    base:  true
+  set2:
+    make:  "E0 71"
+    break: "E0 F0 71"
+    base:  true
+  set3:
+    make:  "64"
+    break: "F0 64"
+
+##################################################
+- id: 79
+
+  basecase:  "Left Arrow"
+
+  set1:
+    make:  "E0 4B"
+    break: "E0 CB"
+    base:  true
+  set2:
+    make:  "E0 6B"
+    break: "E0 F0 6B"
+    base:  true
+  set3:
+    make:  "61"
+    break: "F0 61"
+
+##################################################
+- id: 80
+
+  basecase:  "Home"
+
+  set1:
+    make:  "E0 47"
+    break: "E0 C7"
+    base:  true
+  set2:
+    make:  "E0 6C"
+    break: "E0 F0 6C"
+    base:  true
+  set3:
+    make:  "6E"
+    break: "F0 6E"
+
+##################################################
+- id: 81
+
+  basecase:  "End"
+
+  set1:
+    make:  "E0 4F"
+    break: "E0 CF"
+    base:  true
+  set2:
+    make:  "E0 69"
+    break: "E0 F0 69"
+    base:  true
+  set3:
+    make:  "65"
+    break: "F0 65"
+
+##################################################
+- id: 83
+
+  basecase:  "Up Arrow"
+
+  set1:
+    make:  "E0 48"
+    break: "E0 C8"
+    base:  true
+  set2:
+    make:  "E0 75"
+    break: "E0 F0 75"
+    base:  true
+  set3:
+    make:  "63"
+    break: "F0 63"
+
+##################################################
+- id: 84
+
+  basecase:  "Down Arrow"
+
+  set1:
+    make:  "E0 50"
+    break: "E0 D0"
+    base:  true
+  set2:
+    make:  "E0 72"
+    break: "E0 F0 72"
+    base:  true
+  set3:
+    make:  "60"
+    break: "F0 60"
+
+##################################################
+- id: 85
+
+  basecase:  "Page Up"
+
+  set1:
+    make:  "E0 49"
+    break: "E0 C9"
+    base:  true
+  set2:
+    make:  "E0 7D"
+    break: "E0 F0 7D"
+    base:  true
+  set3:
+    make:  "6F"
+    break: "F0 6F"
+
+##################################################
+- id: 86
+
+  basecase:  "Page Down"
+
+  set1:
+    make:  "E0 51"
+    break: "E0 D1"
+    base:  true
+  set2:
+    make:  "E0 7A"
+    break: "E0 F0 7A"
+    base:  true
+  set3:
+    make:  "6D"
+    break: "F0 6D"
+
+##################################################
+- id: 89
+
+  basecase:  "Right Arrow"
+
+  set1:
+    make:  "E0 4D"
+    break: "E0 CD"
+    base:  true
+  set2:
+    make:  "E0 74"
+    break: "E0 F0 74"
+    base:  true
+  set3:
+    make:  "6A"
+    break: "F0 6A"
+
+##################################################
+- id: 90
+
+  basecase:  "Num Lock"
+
+  set1:
+    make:  "45"
+    break: "C5"
+  set2:
+    make:  "77"
+    break: "F0 77"
+  set3:
+    make:  "76"
+    break: "F0 76"
+
+##################################################
+- id: 91
+
+  basecase:  "7"
+  keypad:    true
+
+  set1:
+    make:  "47"
+    break: "C7"
+  set2:
+    make:  "6C"
+    break: "F0 6C"
+  set3:
+    make:  "6C"
+    break: "F0 6C"
+
+##################################################
+- id: 92
+
+  basecase:  "4"
+  keypad:    true
+
+  set1:
+    make:  "4B"
+    break: "CB"
+  set2:
+    make:  "6B"
+    break: "F0 6B"
+  set3:
+    make:  "6B"
+    break: "F0 6B"
+
+##################################################
+- id: 93
+
+  basecase:  "1"
+  keypad:    true
+
+  set1:
+    make:  "4F"
+    break: "CF"
+  set2:
+    make:  "69"
+    break: "F0 69"
+  set3:
+    make:  "69"
+    break: "F0 69"
+
+##################################################
+- id: 95
+
+  basecase:  "/"
+  keypad:    true
+
+  set1:
+    make:  "E0 35"
+    break: "E0 B5"
+    base:  true
+  set2:
+    make:  "E0 4A"
+    break: "E0 F0 4A"
+    base:  true
+  set3:
+    make:  "77"
+    break: "F0 77"
+
+##################################################
+- id: 96
+
+  basecase:  "8"
+  keypad:    true
+
+  set1:
+    make:  "48"
+    break: "C8"
+  set2:
+    make:  "75"
+    break: "F0 75"
+  set3:
+    make:  "75"
+    break: "F0 75"
+
+##################################################
+- id: 97
+
+  basecase:  "5"
+  keypad:    true
+
+  set1:
+    make:  "4C"
+    break: "CC"
+  set2:
+    make:  "73"
+    break: "F0 73"
+  set3:
+    make:  "73"
+    break: "F0 73"
+
+##################################################
+- id: 98
+
+  basecase:  "2"
+  keypad:    true
+
+  set1:
+    make:  "50"
+    break: "D0"
+  set2:
+    make:  "72"
+    break: "F0 72"
+  set3:
+    make:  "72"
+    break: "F0 72"
+
+##################################################
+- id: 99
+
+  basecase:  "0"
+  keypad:    true
+
+  set1:
+    make:  "52"
+    break: "D2"
+  set2:
+    make:  "70"
+    break: "F0 70"
+  set3:
+    make:  "70"
+    break: "F0 70"
+
+##################################################
+- id: 100
+
+  basecase:  "*"
+  keypad:    true
+
+  set1:
+    make:  "37"
+    break: "B7"
+  set2:
+    make:  "7C"
+    break: "F0 7C"
+  set3:
+    make:  "7E"
+    break: "F0 7E"
+
+##################################################
+- id: 101
+
+  basecase:  "9"
+  keypad:    true
+
+  set1:
+    make:  "49"
+    break: "C9"
+  set2:
+    make:  "7D"
+    break: "F0 7D"
+  set3:
+    make:  "7D"
+    break: "F0 7D"
+
+##################################################
+- id: 102
+
+  basecase:  "6"
+  keypad:    true
+
+  set1:
+    make:  "4D"
+    break: "CD"
+  set2:
+    make:  "74"
+    break: "F0 74"
+  set3:
+    make:  "74"
+    break: "F0 74"
+
+##################################################
+- id: 103
+
+  basecase:  "3"
+  keypad:    true
+
+  set1:
+    make:  "51"
+    break: "D1"
+  set2:
+    make:  "7A"
+    break: "F0 7A"
+  set3:
+    make:  "7A"
+    break: "F0 7A"
+
+##################################################
+- id: 104
+
+  basecase:  "."
+  keypad:    true
+
+  set1:
+    make:  "53"
+    break: "D3"
+  set2:
+    make:  "71"
+    break: "F0 71"
+  set3:
+    make:  "71"
+    break: "F0 71"
+
+##################################################
+- id: 105
+
+  basecase:  "-"
+  keypad:    true
+
+  set1:
+    make:  "4A"
+    break: "CA"
+  set2:
+    make:  "7B"
+    break: "F0 7B"
+  set3:
+    make:  "84"
+    break: "F0 84"
+
+##################################################
+- id: 106
+
+  basecase:  "+"
+  keypad:    true
+
+  set1:
+    make:  "4E"
+    break: "CE"
+  set2:
+    make:  "79"
+    break: "F0 79"
+  set3:
+    make:  "7C"
+    break: "F0 7C"
+
+##################################################
+- id: 108
+
+  basecase:  "Enter"
+  keypad:    true
+
+  set1:
+    make:  "E0 1C"
+    break: "E0 9C"
+  set2:
+    make:  "E0 5A"
+    break: "E0 F0 5A"
+  set3:
+    make:  "79"
+    break: "F0 79"
+
+##################################################
+- id: 110
+
+  basecase:  "Esc"
+
+  set1:
+    make:  "01"
+    break: "81"
+  set2:
+    make:  "76"
+    break: "F0 76"
+  set3:
+    make:  "08"
+    break: "F0 08"
+
+##################################################
+- id: 112
+
+  basecase:  "F1"
+
+  set1:
+    make:  "3B"
+    break: "BB"
+  set2:
+    make:  "05"
+    break: "F0 05"
+  set3:
+    make:  "07"
+    break: "F0 07"
+
+##################################################
+- id: 113
+
+  basecase:  "F2"
+
+  set1:
+    make:  "3C"
+    break: "BC"
+  set2:
+    make:  "06"
+    break: "F0 06"
+  set3:
+    make:  "0F"
+    break: "F0 0F"
+
+##################################################
+- id: 114
+
+  basecase:  "F3"
+
+  set1:
+    make:  "3D"
+    break: "BD"
+  set2:
+    make:  "04"
+    break: "F0 04"
+  set3:
+    make:  "17"
+    break: "F0 17"
+
+##################################################
+- id: 115
+
+  basecase:  "F4"
+
+  set1:
+    make:  "3E"
+    break: "BE"
+  set2:
+    make:  "0C"
+    break: "F0 0C"
+  set3:
+    make:  "1F"
+    break: "F0 1F"
+
+##################################################
+- id: 116
+
+  basecase:  "F5"
+
+  set1:
+    make:  "3F"
+    break: "BF"
+  set2:
+    make:  "03"
+    break: "F0 03"
+  set3:
+    make:  "27"
+    break: "F0 27"
+
+##################################################
+- id: 117
+
+  basecase:  "F6"
+
+  set1:
+    make:  "40"
+    break: "C0"
+  set2:
+    make:  "0B"
+    break: "F0 0B"
+  set3:
+    make:  "2F"
+    break: "F0 2F"
+
+##################################################
+- id: 118
+
+  basecase:  "F7"
+
+  set1:
+    make:  "41"
+    break: "C1"
+  set2:
+    make:  "83"
+    break: "F0 83"
+  set3:
+    make:  "37"
+    break: "F0 37"
+
+##################################################
+- id: 119
+
+  basecase:  "F8"
+
+  set1:
+    make:  "42"
+    break: "C2"
+  set2:
+    make:  "0A"
+    break: "F0 0A"
+  set3:
+    make:  "3F"
+    break: "F0 3F"
+
+##################################################
+- id: 120
+
+  basecase:  "F9"
+
+  set1:
+    make:  "43"
+    break: "C3"
+  set2:
+    make:  "01"
+    break: "F0 01"
+  set3:
+    make:  "47"
+    break: "F0 47"
+
+##################################################
+- id: 121
+
+  basecase:  "F10"
+
+  set1:
+    make:  "44"
+    break: "C4"
+  set2:
+    make:  "09"
+    break: "F0 09"
+  set3:
+    make:  "4F"
+    break: "F0 4F"
+
+##################################################
+- id: 122
+
+  basecase:  "F11"
+
+  set1:
+    make:  "57"
+    break: "D7"
+  set2:
+    make:  "78"
+    break: "F0 78"
+  set3:
+    make:  "56"
+    break: "F0 56"
+
+##################################################
+- id: 123
+
+  basecase:  "F12"
+
+  set1:
+    make:  "58"
+    break: "D8"
+  set2:
+    make:  "07"
+    break: "F0 07"
+  set3:
+    make:  "5E"
+    break: "F0 5E"
+
+##################################################
+- id: 124
+
+  basecase:  "Print Screen"
+
+  set1:
+    make:  "E0 2A E0 37"
+    break: "E0 B7 E0 AA"
+  set2:
+    make:  "E0 12 E0 7C"
+    break: "E0 F0 7C E0 F0 12"
+  set3:
+    make:  "57"
+    break: "F0 57"
+
+##################################################
+- id: 125
+
+  basecase:  "Scroll Lock"
+
+  set1:
+    make:  "46"
+    break: "C6"
+  set2:
+    make:  "7E"
+    break: "F0 7E"
+  set3:
+    make:  "5F"
+    break: "F0 5F"
+
+##################################################
+- id: 126
+
+  basecase:  "Pause Break"
+
+  set1:
+    make:  "E1 1D 45"
+    break: "E1 9D C5"
+  set2:
+    make:  "E1 14 77 E1"
+    break: "F0 14 F0 77"
+  set3:
+    make:  "62"
+    break: "F0 62"
+
+##################################################
+- id:
+  - 29
+  - 42
+
+  basecase:  "\\"
+  uppercase: "|"
+
+  set1:
+    make:  "2B"
+    break: "AB"
+  set2:
+    make:  "5D"
+    break: "F0 5D"
+  set3:
+   - make:  "5C"
+     break: "F0 5C"
+   - make:  "53"
+     break: "F0 53"
+
+##################################################

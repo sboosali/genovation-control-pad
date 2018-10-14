@@ -8,6 +8,8 @@ temporary/
 .ghcid.d/
 
 # Haskell
+dist/
+dist-*/
 .ghc.environment.*
 cabal.project.local
 *.o
