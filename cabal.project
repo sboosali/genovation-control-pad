@@ -1,7 +1,4 @@
 ----------------------------------------
-with-compiler: ghc-8.4.3
-
-----------------------------------------
 packages:
 
  ./
@@ -12,7 +9,7 @@ packages:
 ----------------------------------------
 optional-packages:
 
- ../spiros
+ ../spiros/spiros
  ../enumerate/enumerate
  ../enumerate/enumerate-function
  ../kbd/kbd

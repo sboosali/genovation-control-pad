@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: ScanCodes.PS2.KeyDescription { ... }
+# key:  ps2
+# expand-env  : ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# contributor : Spiros Boosalis
+#
+# --
+  KeyDescription
+
+    { number      = $1
+    , character   = $0
+    , twinKeys    = def
+    , isModifier  = def
+    , isNumpad    = def
+    , side        = def
+    , codes1      = Codes { pressCode   = "_"
+                          , releaseCode = "_"
+                          }
+    , codes2      = Codes { pressCode   =    "$2"
+                          , releaseCode = "F0 $2"
+                          }
+    , codes3      = Codes { pressCode   =    "$2"
+                          , releaseCode = "F0 $2"
+                          }
+    }
